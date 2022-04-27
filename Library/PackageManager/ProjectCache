@@ -20,7 +20,7 @@ m_EmbeddedPackageManifests:
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: "C:/Users/kaanb/OneDrive/Masa\xFCst\xFC/Sturdy-Barnacle/Packages"
-m_EditorVersion: 2021.3.0f1 (6eacc8284459)
+m_EditorVersion: 2021.3.1f1 (3b70a0754835)
 m_ResolvedPackages:
 - packageId: com.unity.ai.navigation@1.0.0-exp.4
   testable: 0

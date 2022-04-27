@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpingForce;
     float yGravity;
     int jumpCount = 0;
+    bool isDashed = false;
 
     private void Awake()
     {
@@ -52,8 +53,15 @@ public class PlayerMovement : MonoBehaviour
             Shooting();
         }
 
-        yGravity+= Physics.gravity.y * Time.deltaTime*5;
-        
+        if (gameObject.GetComponent<CharacterController>().isGrounded)
+        {
+            yGravity= Physics.gravity.y * Time.deltaTime * 6;
+        }
+        else
+        {
+            yGravity += Physics.gravity.y * Time.deltaTime * 6;
+        }
+
         if (Input.GetKeyDown("space")&&jumpCount<3)
         {
             Jumping();
@@ -64,9 +72,22 @@ public class PlayerMovement : MonoBehaviour
         }
         hareket.y = yGravity;
 
-        if (Input.GetButtonDown("left shift"))
+        if (gameObject.GetComponent<CharacterController>().isGrounded)
         {
-            gameObject.GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * 10, ForceMode.Impulse);
+            isDashed = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && isDashed==false)
+        {
+            isDashed = true;
+            float starttime = 0;
+            while (starttime < 5)
+            {
+                starttime++;
+                Vector3 moveDerection = transform.right * (5 - starttime);
+
+                gameObject.GetComponent<CharacterController>().Move(moveDerection * 100 * Time.deltaTime);
+            }
         }
 
     }

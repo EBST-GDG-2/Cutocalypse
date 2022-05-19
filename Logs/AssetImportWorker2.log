@@ -1,0 +1,463 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.2f1 (d6360bedb9a0) revision 14038539'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'tr' Physical Memory: 16335 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+D:/unityproject/Example/Sturdy-Barnacle
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+49550
+Successfully changed project path to: D:/unityproject/Example/Sturdy-Barnacle
+D:/unityproject/Example/Sturdy-Barnacle
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 253.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.2f1 (d6360bedb9a0)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/unityproject/Example/Sturdy-Barnacle/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Radeon RX 580 Series (ID=0x67df)
+    Vendor:   ATI
+    VRAM:     4074 MB
+    Driver:   30.0.15021.7000
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56364
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.013108 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 112.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.045 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1045ms)
+		BeginReloadAssembly (295ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (596ms)
+			LoadAssemblies (275ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (136ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (364ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (71ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (112ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (119ms)
+				ProcessInitializeOnLoadMethodAttributes (59ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007219 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\unityproject\Example\Sturdy-Barnacle\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unityproject\Example\Sturdy-Barnacle\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.626 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1627ms)
+		BeginReloadAssembly (264ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (133ms)
+		EndReloadAssembly (1071ms)
+			LoadAssemblies (161ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (329ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (476ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (119ms)
+				ProcessInitializeOnLoadAttributes (285ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (14ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3432 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (112.9 KB). Loaded Objects now: 3898.
+Memory consumption went from 124.4 MB to 124.3 MB.
+Total: 4.076500 ms (FindLiveObjects: 0.482100 ms CreateObjectMapping: 0.107700 ms MarkObjects: 3.327200 ms  DeleteObjects: 0.157300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 32273.635772 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/BasicMaleNoWeaponMaskTint.prefab
+  artifactKey: Guid(a3ad515e6bb0e4545809835aef3e68a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/BasicMaleNoWeaponMaskTint.prefab using Guid(a3ad515e6bb0e4545809835aef3e68a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b957990ca99826c38b030026b01e67a') in 2.743097 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/HoodieMaskTint.prefab
+  artifactKey: Guid(3d53119a02de53e4c93da85d1f135c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/HoodieMaskTint.prefab using Guid(3d53119a02de53e4c93da85d1f135c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0354278c7857b04470f11da55e33664') in 1.531993 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/SalarymanMaskTint.prefab
+  artifactKey: Guid(d2f0886afee6f8d4d8920ee01cee352d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/SalarymanMaskTint.prefab using Guid(d2f0886afee6f8d4d8920ee01cee352d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0be543d3cce9039c01e501929df02bb8') in 0.864361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.433217 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/SamuraiMaskTint.prefab
+  artifactKey: Guid(b8d6b1ead9d487749a17b4403f8e9c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/SamuraiMaskTint.prefab using Guid(b8d6b1ead9d487749a17b4403f8e9c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57f66abc15a8d4fe0e094186b4400c60') in 0.733315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.066751 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/SoldierMaskTint.prefab
+  artifactKey: Guid(3c6c6c203558f2e45ab1266f4452ffbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/SoldierMaskTint.prefab using Guid(3c6c6c203558f2e45ab1266f4452ffbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0f9065b825ff98a47755bebfd19d3b2') in 0.718123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.574289 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/BasicMaleMaskTint.prefab
+  artifactKey: Guid(365d5f64ec7f303468f5a2e9791c0630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/BasicMaleMaskTint.prefab using Guid(365d5f64ec7f303468f5a2e9791c0630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '284992789b07565b7a6b9a1be8bc204a') in 0.500688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.019022 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/BasicFemaleMaskTint.prefab
+  artifactKey: Guid(16c35e6b4f70e134ebc0da459a5d293b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRMaskTint/BasicFemaleMaskTint.prefab using Guid(16c35e6b4f70e134ebc0da459a5d293b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '735b29ac62f6de8cbfb5963500e785d0') in 0.608013 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.698040 seconds.
+  path: Assets/Scenes/Elbruz.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Elbruz.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ccb7e2c28371146525775f2836748ff') in 0.002258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.814068 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/AlienDefault.prefab
+  artifactKey: Guid(a2836f0676e46dc4685632e429aadbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/AlienDefault.prefab using Guid(a2836f0676e46dc4685632e429aadbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad29c1c911d5c7a3d88cf4f3e0ab2f9') in 0.798786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/KnightDefault.prefab
+  artifactKey: Guid(e35ed10d84d43824897c7725c0484540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/KnightDefault.prefab using Guid(e35ed10d84d43824897c7725c0484540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '205add61e60a6a4221ae2e0cf3c64656') in 0.778641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/ChickenDefault.prefab
+  artifactKey: Guid(9c3b220a089f7c747bdc1a5c678cbbf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/ChickenDefault.prefab using Guid(9c3b220a089f7c747bdc1a5c678cbbf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51da38a89cae58c036a6c4213d03b54') in 0.354446 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.175563 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/NinjaDefault.prefab
+  artifactKey: Guid(5b8fb5f7958265f439719d3c335d052a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/NinjaDefault.prefab using Guid(5b8fb5f7958265f439719d3c335d052a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afb502f09cb9e44df5ade4802c09ba62') in 0.458371 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.300596 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/SalarymanDefault.prefab
+  artifactKey: Guid(1c39674f261e11b4f80664cc2e5b6b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/SalarymanDefault.prefab using Guid(1c39674f261e11b4f80664cc2e5b6b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57517726bbf0ae51ca22c5939b4e9528') in 0.300475 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.500940 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/SamuraiDefault.prefab
+  artifactKey: Guid(879f3c2143ca95744ab0aa427ceb5c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/SamuraiDefault.prefab using Guid(879f3c2143ca95744ab0aa427ceb5c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8c1e8d4e2d9c408a165cadf8452f220') in 0.277925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.249040 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/SniperDefault.prefab
+  artifactKey: Guid(3be40c921eae126468595736e72eb132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/SniperDefault.prefab using Guid(3be40c921eae126468595736e72eb132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b784bd50514a76f9f2c97f5140c00d9') in 0.311493 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003096 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/SpacemanDefault.prefab
+  artifactKey: Guid(927b1ef0067ed344c90f0793ad5a3d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/SpacemanDefault.prefab using Guid(927b1ef0067ed344c90f0793ad5a3d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b61b68f2d7e97ac7e65f157939e754d5') in 0.388263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/TerroristDefault.prefab
+  artifactKey: Guid(b7862987238331b429631c399071f6db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/TerroristDefault.prefab using Guid(b7862987238331b429631c399071f6db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc8b46852f1a8f84d884808b9d387d56') in 0.460321 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 44.805809 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint
+  artifactKey: Guid(a84a7a47f67a8594481e09a0e804fd15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint using Guid(a84a7a47f67a8594481e09a0e804fd15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f90b4fa678f7e870050f5eaad576c8f8') in 0.001915 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.644167 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint/AlbedoMaskTint_Bodies.png
+  artifactKey: Guid(5d29e0298e764384db51a279d41526fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint/AlbedoMaskTint_Bodies.png using Guid(5d29e0298e764384db51a279d41526fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '856f18bbfa9d47aed4615e9c3a4f7a63') in 0.114576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint/Mask01_Bodies.png
+  artifactKey: Guid(738ce56f54245374dab96ea25e7a3a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint/Mask01_Bodies.png using Guid(738ce56f54245374dab96ea25e7a3a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f850644677be38d1bd2e95cc702794d') in 0.097865 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000884 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint/Mask02_Heads.png
+  artifactKey: Guid(71a19f506f570d14e9009fbe3d907742) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint/Mask02_Heads.png using Guid(71a19f506f570d14e9009fbe3d907742) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d21faac9a1b3d48bcd84e39d26d1122') in 0.034939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.692706 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint/SAM_Heads.png
+  artifactKey: Guid(54b5f9d4916329b4aa4982a83aa635cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint/SAM_Heads.png using Guid(54b5f9d4916329b4aa4982a83aa635cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a52eb9df7b35ec2825ecdaa3e7ea2cd') in 0.047939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.745715 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint/SAM_Weapons.png
+  artifactKey: Guid(4573d8fbe1ef9044f93ff03bc0e09f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Texture/PBRMaskTint/SAM_Weapons.png using Guid(4573d8fbe1ef9044f93ff03bc0e09f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd70824db3619d35f10fbc13ab33e438d') in 0.046025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.776268 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Animation/NoWeaponStance/DashBWD_NoWeapon_Anim.fbx
+  artifactKey: Guid(744568ad8923117488b1c313dcbd3231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Animation/NoWeaponStance/DashBWD_NoWeapon_Anim.fbx using Guid(744568ad8923117488b1c313dcbd3231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36252b1dee9ccad1b19e2325463332b2') in 0.083671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Animation/NoWeaponStance/GetHit02_NoWeapon_Anim.fbx
+  artifactKey: Guid(b352d4b37e0f95f48aff3bca1c7451ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Animation/NoWeaponStance/GetHit02_NoWeapon_Anim.fbx using Guid(b352d4b37e0f95f48aff3bca1c7451ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6dff7ade5859ac89123e5e705d2f672') in 0.051161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.186303 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Material/PBRMaskTint
+  artifactKey: Guid(212365e823de3d041adb264088071f44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Material/PBRMaskTint using Guid(212365e823de3d041adb264088071f44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af46be0ce982d2e9bad0465b98762caa') in 0.001888 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.113384 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Material/PBRMaskTint/BodiesPBRMaskTint.mat
+  artifactKey: Guid(1ce061aa5c14e5f41adf6169ec10e130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Material/PBRMaskTint/BodiesPBRMaskTint.mat using Guid(1ce061aa5c14e5f41adf6169ec10e130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e577cd2dfe61d25a736675a464eaf70c') in 0.332944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.818876 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Material/PBRDefault/BodiesPBRDefault.mat
+  artifactKey: Guid(9a563ffc77d94094bac866f46e58cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Material/PBRDefault/BodiesPBRDefault.mat using Guid(9a563ffc77d94094bac866f46e58cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c91d2fc07cc5f99bfa1de0f4feaeed') in 0.168784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.066807 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Mesh/Weapon
+  artifactKey: Guid(537c9a497c3138c438b6b29a7a116551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Mesh/Weapon using Guid(537c9a497c3138c438b6b29a7a116551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cfbd7fd80875b01d94affd7b1bd6c91') in 0.001873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.085690 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Mesh/Weapon/FlameThrower.fbx
+  artifactKey: Guid(4c9985a3346424148af1eb90050adb3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Mesh/Weapon/FlameThrower.fbx using Guid(4c9985a3346424148af1eb90050adb3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e16082a51bb41c27432befc57a7e42e4') in 0.023950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.795329 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Mesh/Weapon/IceGun.fbx
+  artifactKey: Guid(deca1cea2f326d9408b02b3fa5f2f361) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Mesh/Weapon/IceGun.fbx using Guid(deca1cea2f326d9408b02b3fa5f2f361) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e8925127dee8b1a136be1a1bc22f7ac') in 0.015332 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.700462 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault
+  artifactKey: Guid(c92b12299e5ac5444824824f79118e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault using Guid(c92b12299e5ac5444824824f79118e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b04102b391c9262e5c293ed69cc6cd9a') in 0.002259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.095306 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/BasicMaleDefault.prefab
+  artifactKey: Guid(5811f4236f7f88b41b2a1da538566706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/BasicMaleDefault.prefab using Guid(5811f4236f7f88b41b2a1da538566706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09da030c66191fb34773308a3dab0696') in 0.490511 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007593 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\unityproject\Example\Sturdy-Barnacle\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unityproject\Example\Sturdy-Barnacle\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.547 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1548ms)
+		BeginReloadAssembly (200ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (58ms)
+		EndReloadAssembly (1199ms)
+			LoadAssemblies (142ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (418ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (526ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (37ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (115ms)
+				ProcessInitializeOnLoadAttributes (312ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3413 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 19 unused Assets / (80.3 KB). Loaded Objects now: 3946.
+Memory consumption went from 141.1 MB to 141.0 MB.
+Total: 3.951800 ms (FindLiveObjects: 0.367900 ms CreateObjectMapping: 0.110000 ms MarkObjects: 3.364100 ms  DeleteObjects: 0.107900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 259.502702 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Animation/NoWeaponStance/GetUp_NoWeapon_Anim.fbx
+  artifactKey: Guid(c4512dda7702d3c4785527bbe2f8d1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Animation/NoWeaponStance/GetUp_NoWeapon_Anim.fbx using Guid(c4512dda7702d3c4785527bbe2f8d1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8091815984ce31ec4fd429b19eba96f3') in 0.141136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.146240 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Animation/Rifle02Stance/DashBWD_RF02_Anim.fbx
+  artifactKey: Guid(7f84ace5399e3774e9fdcf28d568ba0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Animation/Rifle02Stance/DashBWD_RF02_Anim.fbx using Guid(7f84ace5399e3774e9fdcf28d568ba0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aff92ac52c30e3d5e3c2fd70ed81989c') in 0.034366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.292355 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Animation/Rifle01Stance/GetHit01_RF01_Anim.fbx
+  artifactKey: Guid(e0d22dac7b0b13b4bac4a9ee0fda0538) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Animation/Rifle01Stance/GetHit01_RF01_Anim.fbx using Guid(e0d22dac7b0b13b4bac4a9ee0fda0538) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c458506542de8be2da7bd45c174ec0e1') in 0.038636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.000117 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Texture/PBRDefault/Albedo_Bodies.png
+  artifactKey: Guid(1fcddc08702c0894faa0d61c3e998cd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Texture/PBRDefault/Albedo_Bodies.png using Guid(1fcddc08702c0894faa0d61c3e998cd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67249657ec354b91ea2f4d9b98f68e21') in 0.061805 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Texture/PBRDefault/AO_Weapons.png
+  artifactKey: Guid(9acc1384d2eda8345bd925fef036d462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Texture/PBRDefault/AO_Weapons.png using Guid(9acc1384d2eda8345bd925fef036d462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0be4c245717d1dc8ae575e92699ad92f') in 0.068669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Texture/PBRDefault/AO_Heads.png
+  artifactKey: Guid(256507b15b8d9c846acd0d6a58c8af5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Texture/PBRDefault/AO_Heads.png using Guid(256507b15b8d9c846acd0d6a58c8af5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b327a54d274ce4664ae8ed8b5446857') in 0.071944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/BattleRoyaleHeroesPBR/Texture/PBRDefault/MS_Bodies.png
+  artifactKey: Guid(46dc657276aa56b4887c7dc3f443cda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyaleHeroesPBR/Texture/PBRDefault/MS_Bodies.png using Guid(46dc657276aa56b4887c7dc3f443cda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4598500b4d1c98d868709cbd6278a4b3') in 0.049992 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

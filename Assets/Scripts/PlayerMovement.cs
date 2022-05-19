@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Rigidbody rb;
+    [SerializeField] Animator animator;
     private Vector3 hareket;
     [SerializeField] private float hareketHizi, mermiHizi;
     GameObject kamera;
@@ -14,11 +14,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpingForce;
     float yGravity;
     int jumpCount = 0;
-    bool isDashed = false;
-
+    private bool isDashed = false;
     private void Awake()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
         kamera = GameObject.FindWithTag("MainCamera");
     }
 
@@ -31,9 +29,23 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        hareket.x = Input.GetAxis("Horizontal")*hareketHizi;
-        hareket.z = Input.GetAxis("Vertical")*hareketHizi;
-       
+        if (hareket.x == 0 && hareket.z == 0) 
+        {
+            animator.SetBool("move", false);
+        }
+        else
+        {
+            animator.SetBool("move", true);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift)&&isDashed==false)
+        {
+            isDashed = true;
+            animator.SetTrigger("dash");
+        }
+
+
+        hareket.x = Input.GetAxis("Horizontal") * hareketHizi;
+        hareket.z = Input.GetAxis("Vertical") * hareketHizi;
         gameObject.GetComponent<CharacterController>().Move(hareket*Time.deltaTime);
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 5.23f;
@@ -44,9 +56,9 @@ public class PlayerMovement : MonoBehaviour
         mousePos.y = mousePos.y - objectPos.y;
 
         float angle = Mathf.Atan2(mousePos.x, mousePos.y) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, angle - 90, 0));
+        transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
 
-        kamera.transform.position = new Vector3(transform.position.x, transform.position.y + 25, transform.position.z - 15);
+        kamera.transform.position = new Vector3(transform.position.x, transform.position.y + 11, transform.position.z - 6);
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -77,23 +89,11 @@ public class PlayerMovement : MonoBehaviour
             isDashed = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && isDashed==false)
-        {
-            isDashed = true;
-            float starttime = 0;
-            while (starttime < 5)
-            {
-                starttime++;
-                Vector3 moveDerection = transform.right * (5 - starttime);
-
-                gameObject.GetComponent<CharacterController>().Move(moveDerection * 100 * Time.deltaTime);
-            }
-        }
-
     }
     
     void Shooting()
     {
+        animator.SetTrigger("shoot");
         GameObject firedBullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
         firedBullet.GetComponent<Rigidbody>().AddForce(firePoint.forward*mermiHizi,ForceMode.Impulse);
     }

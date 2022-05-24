@@ -1,0 +1,91 @@
+.seq-header {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+}
+
+.seq-header-text {
+    -unity-font-style: bold;
+    padding: 2px 4px;
+}
+
+.seq-add-dropdown {
+    flex-direction: row;
+    margin: 1px;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.seq-dropdown {
+    width: 14px;
+    height: 14px;
+    margin-top: 2px;
+}
+
+.seq-menu-button {
+    border-width: 0;
+    border-radius: 0;
+    height: 18px;
+    width: 18px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.seq-create-add-new {
+    width: 18px;
+    height: 18px;
+}
+
+.seq-list {
+    margin: 5px 5px 10px 5px;
+    flex-grow: 0;
+}
+
+.seq-list-header {
+    border-top-right-radius: 3px;
+    border-width: 1px;
+}
+
+.seq-list-content {
+    padding: 5px 0;
+    border-bottom-left-radius: 3px;
+    border-width: 0 1px 1px 1px;
+}
+
+.seq-list-item {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.seq-list-footer {
+    flex-direction: row-reverse;
+    padding-right: 10px;
+    height: 18px;
+}
+
+.seq-list-footer-buttons {
+    flex-direction: row;
+    width: 58px;
+    margin-top: -1px;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0;
+    border-bottom-left-radius: 3px;
+}
+
+.seq-list-footer-buttons Button {
+    font-size: 20px;
+    border-width: 0px;
+    height: 15px;
+    width: 24px;
+    margin: 1px 2px 2px 2px;
+    padding-bottom: 3px;
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.seq-warning-label {
+    margin: 5px 10px 0px 10px;
+    -unity-text-align: middle-center;
+    background-color: rgba(255, 255, 0, 0.17);
+    border-width: 1px;
+    border-color: rgba(110, 110, 0, 255);
+}

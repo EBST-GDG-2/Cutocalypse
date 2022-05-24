@@ -1,0 +1,199 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+namespace UnityEngine.Sequences
+{
+    public class MasterSequence : UnityEngine.ScriptableObject
+    {
+        public static event System.Action<UnityEngine.Sequences.MasterSequence, UnityEngine.Sequences.TimelineSequence> sequenceAdded;
+        public static event System.Action<UnityEngine.Sequences.MasterSequence, UnityEngine.Sequences.TimelineSequence> sequenceRemoved;
+        public UnityEngine.Sequences.TimelineSequence rootSequence { get; }
+        public MasterSequence() {}
+        public static UnityEngine.Sequences.MasterSequence CreateInstance(string name, float fps = 24);
+        public UnityEngine.Sequences.TimelineSequence NewSequence(string clipName, UnityEngine.Sequences.TimelineSequence parent = default(UnityEngine.Sequences.TimelineSequence));
+        [System.Runtime.CompilerServices.IteratorStateMachine(typeof(UnityEngine.Sequences.MasterSequence.<RemoveSequence>d__19))] public System.Collections.Generic.IEnumerable<UnityEngine.Sequences.TimelineSequence> RemoveSequence(UnityEngine.Sequences.TimelineSequence sequence);
+    }
+
+    public class SceneReference : UnityEngine.ISerializationCallbackReceiver
+    {
+        public string path { get; set; }
+        public SceneReference() {}
+        public virtual void OnAfterDeserialize();
+        public virtual void OnBeforeSerialize();
+        public static string op_Implicit(UnityEngine.Sequences.SceneReference sceneReference);
+    }
+
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(false, @"UnityEngine.CinematicToolbox", @"Unity.CinematicToolbox", @"CinematicClip")] public class Sequence
+    {
+        [UnityEngine.SerializeField] protected double m_Duration;
+        [UnityEngine.SerializeField] protected float m_Fps;
+        [UnityEngine.SerializeField] protected string m_Name;
+        [UnityEngine.SerializeField] protected double m_Start;
+        public static event System.Action<UnityEngine.Sequences.Sequence> sequenceRenamed;
+        public System.Collections.Generic.IEnumerable<UnityEngine.Sequences.Sequence> children { get; }
+        public virtual double duration { get; set; }
+        public double end { get; }
+        public virtual float fps { get; set; }
+        public bool hasChildren { get; }
+        protected bool isFpsInherited { get; }
+        public virtual string name { get; set; }
+        public UnityEngine.Sequences.Sequence parent { get; set; }
+        public virtual double start { get; set; }
+        public Sequence() {}
+        public virtual void AddChild(UnityEngine.Sequences.Sequence childClip);
+        protected virtual double AddChildClip(UnityEngine.Sequences.Sequence childClip);
+        public virtual double Move(double newStart);
+        protected virtual void ParentClip(UnityEngine.Sequences.Sequence parentClip);
+        public virtual void RemoveChild(UnityEngine.Sequences.Sequence childClip);
+        protected virtual void RemoveChildClip(UnityEngine.Sequences.Sequence childClip);
+        public virtual void SetDuration(double newDuration);
+        protected virtual void UnParentClip();
+    }
+
+    [UnityEngine.DisallowMultipleComponent] [UnityEngine.ExecuteInEditMode] [UnityEngine.HelpURL(@"https://docs.unity3d.com/Packages/com.unity.sequences@1.0/manual//ref-components.html#sequence-asset")] public class SequenceAsset : UnityEngine.MonoBehaviour
+    {
+        public string type { get; set; }
+        public SequenceAsset() {}
+    }
+
+    [UnityEngine.ExecuteInEditMode] [UnityEngine.HelpURL(@"https://docs.unity3d.com/Packages/com.unity.sequences@1.0/manual//ref-components.html#sequence-filter")] public sealed class SequenceFilter : UnityEngine.MonoBehaviour
+    {
+        public int elementIndex { get; set; }
+        public UnityEngine.Sequences.MasterSequence masterSequence { get; set; }
+        public SequenceFilter() {}
+    }
+
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(false, @"UnityEngine.CinematicToolbox", @"Unity.CinematicToolbox", @"TimelineCinematicClip")] public class TimelineSequence : UnityEngine.Sequences.Sequence
+    {
+        public UnityEngine.Sequences.Timeline.EditorialTrack childrenTrack { get; }
+        public string childrenTrackName { get; set; }
+        public virtual double duration { get; set; }
+        public UnityEngine.Timeline.TimelineClip editorialClip { get; }
+        public virtual float fps { get; set; }
+        public virtual string name { set; }
+        public virtual double start { get; set; }
+        public UnityEngine.Timeline.TimelineAsset timeline { get; }
+        protected virtual double AddChildClip(UnityEngine.Sequences.Sequence childClip);
+        public System.Collections.Generic.IReadOnlyCollection<string> GetRelatedScenes();
+        protected virtual void RemoveChildClip(UnityEngine.Sequences.Sequence childClip);
+        protected virtual void UnParentClip();
+    }
+}
+
+namespace UnityEngine.Sequences.Timeline
+{
+    [System.ComponentModel.DisplayName(@"Editorial Clip")] public class EditorialPlayableAsset : UnityEngine.Sequences.Timeline.NestedTimelinePlayableAsset, UnityEngine.Timeline.ITimelineClipAsset
+    {
+        public virtual UnityEngine.Timeline.ClipCaps clipCaps { get; }
+        public EditorialPlayableAsset() {}
+    }
+
+    [System.ComponentModel.DisplayName(@"Sequencing/Editorial Track")] [UnityEngine.Timeline.TrackClipType(typeof(UnityEngine.Sequences.Timeline.EditorialPlayableAsset), false)] [UnityEngine.Timeline.TrackColor(0.058, 0.462, 0.588)] public class EditorialTrack : UnityEngine.Sequences.Timeline.NestedTimelineTrack
+    {
+        public EditorialTrack() {}
+    }
+
+    [UnityEngine.Timeline.HideInMenu] public abstract class NestedTimelinePlayableAsset : UnityEngine.Playables.PlayableAsset
+    {
+        public UnityEngine.ExposedReference<UnityEngine.Playables.PlayableDirector> director;
+        public virtual double duration { get; }
+        protected NestedTimelinePlayableAsset() {}
+        public virtual UnityEngine.Playables.Playable CreatePlayable(UnityEngine.Playables.PlayableGraph graph, UnityEngine.GameObject owner);
+    }
+
+    [UnityEngine.Timeline.HideInMenu] public abstract class NestedTimelineTrack : UnityEngine.Timeline.TrackAsset
+    {
+        protected NestedTimelineTrack() {}
+        public virtual void GatherProperties(UnityEngine.Playables.PlayableDirector director, UnityEngine.Timeline.IPropertyCollector driver);
+    }
+
+    [System.ComponentModel.DisplayName(@"Activation clip")] public class SceneActivationPlayableAsset : UnityEngine.Playables.PlayableAsset, UnityEngine.Timeline.ITimelineClipAsset
+    {
+        public virtual UnityEngine.Timeline.ClipCaps clipCaps { get; }
+        public SceneActivationPlayableAsset() {}
+        public virtual UnityEngine.Playables.Playable CreatePlayable(UnityEngine.Playables.PlayableGraph graph, UnityEngine.GameObject owner);
+    }
+
+    [UnityEngine.Timeline.TrackClipType(typeof(UnityEngine.Sequences.Timeline.SceneActivationPlayableAsset))] [UnityEngine.Timeline.TrackColor(0.55, 0.5, 0.14)] public class SceneActivationTrack : UnityEngine.Timeline.TrackAsset
+    {
+        public UnityEngine.Sequences.SceneReference scene;
+        public SceneActivationTrack() {}
+        public virtual UnityEngine.Playables.Playable CreateTrackMixer(UnityEngine.Playables.PlayableGraph graph, UnityEngine.GameObject go, int inputCount);
+        public virtual void GatherProperties(UnityEngine.Playables.PlayableDirector director, UnityEngine.Timeline.IPropertyCollector driver);
+    }
+
+    [System.ComponentModel.DisplayName(@"Sequence Asset Clip")] public class SequenceAssetPlayableAsset : UnityEngine.Sequences.Timeline.NestedTimelinePlayableAsset, UnityEngine.Timeline.ITimelineClipAsset
+    {
+        public virtual UnityEngine.Timeline.ClipCaps clipCaps { get; }
+        public SequenceAssetPlayableAsset() {}
+    }
+
+    [System.ComponentModel.DisplayName(@"Sequencing/Sequence Asset Track")] [UnityEngine.Timeline.TrackClipType(typeof(UnityEngine.Sequences.Timeline.SequenceAssetPlayableAsset), false)] [UnityEngine.Timeline.TrackColor(0.058, 0.462, 0.588)] public class SequenceAssetTrack : UnityEngine.Sequences.Timeline.NestedTimelineTrack
+    {
+        public SequenceAssetTrack() {}
+    }
+
+    public class StoryboardMixerBehaviour : UnityEngine.Playables.PlayableBehaviour
+    {
+        public UnityEngine.Canvas canvas { get; }
+        public StoryboardMixerBehaviour() {}
+        public virtual void OnPlayableCreate(UnityEngine.Playables.Playable playable);
+        public virtual void OnPlayableDestroy(UnityEngine.Playables.Playable playable);
+    }
+
+    public class StoryboardPlayableAsset : UnityEngine.Playables.PlayableAsset, UnityEngine.Timeline.ITimelineClipAsset
+    {
+        [UnityEngine.Range(0, 1)] [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"The opacity of the board.  0 is transparent, 1 is opaque")] public float alpha;
+        [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"The board to be displayed")] public UnityEngine.Texture board;
+        [UnityEngine.Tooltip(@"If checked, the board will be flipped horizontally")] public bool horizontalFlip;
+        [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"The screen-space position at which to display the board. Zero is center")] public UnityEngine.Vector2 position;
+        [UnityEngine.Min(0)] [UnityEngine.Tooltip(@"The screen-space scaling to apply to the board")] public UnityEngine.Vector2 scale;
+        [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"If checked, the specified board will be displayed as an overlay over the virtual camera's output")] public bool showBoard;
+        [UnityEngine.Tooltip(@"If checked, X and Y scale are synchronized")] public bool syncScale;
+        [UnityEngine.Tooltip(@"If checked, the board will be flipped vertically")] public bool verticalFlip;
+        [UnityEngine.Range(-180, 180)] [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"The z-axis rotation to apply to the board")] public float zRotation;
+        public virtual UnityEngine.Timeline.ClipCaps clipCaps { get; }
+        public StoryboardPlayableAsset() {}
+        public virtual UnityEngine.Playables.Playable CreatePlayable(UnityEngine.Playables.PlayableGraph graph, UnityEngine.GameObject owner);
+    }
+
+    public class StoryboardPlayableBehaviour : UnityEngine.Playables.PlayableBehaviour
+    {
+        public float alpha { set; }
+        public UnityEngine.Texture board { set; }
+        public UnityEngine.Vector2 position { set; }
+        public UnityEngine.Vector3 rotation { set; }
+        public UnityEngine.Vector2 scale { set; }
+        public bool showBoard { set; }
+        public StoryboardPlayableBehaviour() {}
+        public virtual void OnBehaviourPause(UnityEngine.Playables.Playable playable, UnityEngine.Playables.FrameData info);
+        public virtual void ProcessFrame(UnityEngine.Playables.Playable playable, UnityEngine.Playables.FrameData info, object playerData);
+    }
+
+    [System.ComponentModel.DisplayName(@"Storyboard Track")] [UnityEngine.Timeline.TrackClipType(typeof(UnityEngine.Sequences.Timeline.StoryboardPlayableAsset))] [UnityEngine.Timeline.TrackColor(0.9294118, 0.4941176, 0.007843138)] public class StoryboardTrack : UnityEngine.Timeline.TrackAsset
+    {
+        [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"Clips created in this track will be created with this default duration.Changing this value with not change the length of pre-existing Clips")] public double defaultFrameDuration;
+        [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"sorting order of the Storyboard Canvas")] public int sortOrder;
+        public StoryboardTrack() {}
+        public virtual UnityEngine.Playables.Playable CreateTrackMixer(UnityEngine.Playables.PlayableGraph graph, UnityEngine.GameObject go, int inputCount);
+        protected virtual void OnCreateClip(UnityEngine.Timeline.TimelineClip clip);
+    }
+
+    [System.Runtime.CompilerServices.Extension] public static class TimelineAssetExtensions
+    {
+        [System.Runtime.CompilerServices.Extension] public static UnityEngine.Playables.PlayableDirector FindDirector(UnityEngine.Timeline.TimelineAsset timeline);
+        [System.Runtime.CompilerServices.Extension] public static T GetOrCreateTrack<T>(UnityEngine.Timeline.TimelineAsset asset, string name) where T : UnityEngine.Timeline.TrackAsset, new();
+        [System.Runtime.CompilerServices.Extension] public static System.Collections.Generic.IReadOnlyCollection<string> GetScenes(UnityEngine.Timeline.TimelineAsset timeline);
+        [System.Runtime.CompilerServices.Extension] public static T GetTrack<T>(UnityEngine.Timeline.TimelineAsset asset, string name) where T : UnityEngine.Timeline.TrackAsset;
+    }
+
+    [System.Runtime.CompilerServices.Extension] public static class TrackAssetExtensions
+    {
+        [System.Runtime.CompilerServices.Extension] public static T GetBinding<T>(UnityEngine.Timeline.TrackAsset track, UnityEngine.Playables.PlayableDirector director) where T : UnityEngine.Object;
+        [System.Runtime.CompilerServices.Extension] public static string GetBindingName(UnityEngine.Timeline.TrackAsset track, UnityEngine.Playables.PlayableDirector director);
+        [System.Runtime.CompilerServices.Extension] public static UnityEngine.Timeline.TimelineClip GetFirstClip(UnityEngine.Timeline.TrackAsset track);
+        [System.Runtime.CompilerServices.Extension] public static UnityEngine.Timeline.TimelineClip GetFirstClipWithName(UnityEngine.Timeline.TrackAsset track, string name);
+        [System.Runtime.CompilerServices.Extension] public static T GetOrCreateFirstAssetClipOfType<T>(UnityEngine.Timeline.TrackAsset track) where T : UnityEngine.Playables.PlayableAsset;
+        [System.Runtime.CompilerServices.Extension] public static T GetOrCreateSubTrackByName<T>(UnityEngine.Timeline.TrackAsset asset, string name) where T : UnityEngine.Timeline.TrackAsset, new();
+    }
+}

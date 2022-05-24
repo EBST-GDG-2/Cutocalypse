@@ -1,0 +1,20 @@
+.seq-asset-collection {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-width: 0.1px;
+    border-top-color: rgb(0, 0, 0);
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.seq-flex-label Label {
+    min-width: auto;
+    flex-grow: 1;
+    max-width: 150px;
+    flex-direction: row;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    align-items: auto;
+}

@@ -1,0 +1,33 @@
+{
+    "name": "Unity.Sequences.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:06cfdfe45d1d648c7a0bc5bff48cf8b5",
+        "GUID:02f771204943f4a40949438e873e3eff",
+        "GUID:f06555f75b070af458a003d92f9efb00",
+        "GUID:49818357e697641afb75d2f8acaf1861",
+        "GUID:847b179520b009e4c8d15c296b1cbf35"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "Unity",
+            "expression": "2021.2.0a18",
+            "define": "UNITY_2021_2_0_A18_OR_NEWER"
+        },
+        {
+            "name": "com.unity.timeline",
+            "expression": "1.6.0-pre.5",
+            "define": "TIMELINE_1_6_0_PRE_5_OR_NEWER"
+        }
+    ],
+    "noEngineReferences": false
+}

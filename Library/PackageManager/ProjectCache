@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637885624143933189
-    m_Hash: 2558043054
+      ticks: 637889999147377025
+    m_Hash: 2846041661
   m_LockFileStatus:
     m_FilePath: D:/unityproject/Example/Sturdy-Barnacle/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637885624366909747
-    m_Hash: 2916194743
+      ticks: 637889999150897612
+    m_Hash: 869606191
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -139,6 +139,7 @@ m_ResolvedPackages:
     - 1.14.15
     - 1.14.16
     - 1.14.17
+    - 1.14.18
     - 1.15.1
     - 1.15.4
     - 1.15.7
@@ -148,6 +149,7 @@ m_ResolvedPackages:
     - 1.15.15
     - 1.15.16
     - 1.15.17
+    - 1.15.18
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -161,6 +163,7 @@ m_ResolvedPackages:
     compatible:
     - 1.15.16
     - 1.15.17
+    - 1.15.18
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -171,7 +174,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
-    verified: 1.15.17
+    verified: 1.15.18
   dependencies:
   - name: com.unity.services.core
     version: 1.0.1
@@ -217,6 +220,102 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.15.16
+    nextVersion: 
+- packageId: com.unity.feature.cinematic@1.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 1.0.0
+  source: 2
+  resolvedPath: D:\unityproject\Example\Sturdy-Barnacle\Library\PackageCache\com.unity.feature.cinematic@1.0.0
+  assetPath: Packages/com.unity.feature.cinematic
+  name: com.unity.feature.cinematic
+  displayName: Cinematic Studio
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: feature
+  description: Create films, TV shows, and other animated linear content. Organize
+    and assemble your assets in structured sequences. Automate complex camera movements.
+    Export data for round-trip and review, and output your final cut. Work with common
+    film industry formats.
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 1.0.0
+    compatible:
+    - 1.0.0
+    verified: 1.0.0
+  dependencies:
+  - name: com.unity.timeline
+    version: default
+  - name: com.unity.sequences
+    version: default
+  - name: com.unity.formats.fbx
+    version: default
+  - name: com.unity.formats.alembic
+    version: default
+  - name: com.unity.cinemachine
+    version: default
+  - name: com.unity.recorder
+    version: default
+  resolvedDependencies:
+  - name: com.unity.timeline
+    version: 1.6.4
+  - name: com.unity.modules.director
+    version: 1.0.0
+  - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
+  - name: com.unity.modules.particlesystem
+    version: 1.0.0
+  - name: com.unity.sequences
+    version: 1.0.4
+  - name: com.unity.recorder
+    version: 3.0.3
+  - name: com.unity.settings-manager
+    version: 1.0.3
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.formats.fbx
+    version: 4.1.2
+  - name: com.autodesk.fbx
+    version: 4.1.1
+  - name: com.unity.formats.alembic
+    version: 2.2.2
+  - name: com.unity.modules.cloth
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.cinemachine
+    version: 2.8.4
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 1.0.0
     nextVersion: 
 - packageId: com.unity.feature.development@1.0.1
   testable: 0
@@ -1040,11 +1139,13 @@ m_ResolvedPackages:
     - 1.7.5
     - 1.7.6
     - 1.7.7
+    - 1.7.8
     - 1.8.0-pre.1
     compatible:
     - 1.7.6
     - 1.7.7
-    verified: 1.7.7
+    - 1.7.8
+    verified: 1.7.8
   dependencies:
   - name: com.unity.ugui
     version: 1.0.0
@@ -3100,6 +3201,535 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.0.1
     nextVersion: 
+- packageId: com.unity.sequences@1.0.4
+  testable: 0
+  isDirectDependency: 0
+  version: 1.0.4
+  source: 1
+  resolvedPath: D:\unityproject\Example\Sturdy-Barnacle\Library\PackageCache\com.unity.sequences@1.0.4
+  assetPath: Packages/com.unity.sequences
+  name: com.unity.sequences
+  displayName: Sequences
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: 'Efficiently create movies, game cinematics or any other linear content.
+
+    Organize
+    your project''s editorial structure and your creative content, assemble the elements
+    for easy authoring and collaboration, and try out new ideas in a non-destructive
+    way.'
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 1.0.0-pre.4
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    - 1.0.0
+    - 1.0.2
+    - 1.0.3
+    - 1.0.4
+    - 1.1.0-pre.1
+    - 1.1.0-pre.2
+    - 1.1.0
+    - 2.0.0-pre.1
+    - 2.0.0-pre.2
+    compatible:
+    - 1.0.4
+    - 1.1.0-pre.1
+    - 1.1.0-pre.2
+    - 1.1.0
+    verified: 1.0.4
+  dependencies:
+  - name: com.unity.timeline
+    version: 1.5.2
+  - name: com.unity.recorder
+    version: 2.5.5
+  - name: com.unity.settings-manager
+    version: 1.0.3
+  - name: com.unity.ugui
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.timeline
+    version: 1.6.4
+  - name: com.unity.modules.director
+    version: 1.0.0
+  - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
+  - name: com.unity.modules.particlesystem
+    version: 1.0.0
+  - name: com.unity.recorder
+    version: 3.0.3
+  - name: com.unity.settings-manager
+    version: 1.0.3
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637756828920000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sequences.git
+    revision: a7b83c004a80a4c154a2fa918a43d8d2c0e90636
+    path: 
+  unityLifecycle:
+    version: 1.0.4
+    nextVersion: 
+- packageId: com.unity.formats.fbx@4.1.2
+  testable: 0
+  isDirectDependency: 0
+  version: 4.1.2
+  source: 1
+  resolvedPath: D:\unityproject\Example\Sturdy-Barnacle\Library\PackageCache\com.unity.formats.fbx@4.1.2
+  assetPath: Packages/com.unity.formats.fbx
+  name: com.unity.formats.fbx
+  displayName: FBX Exporter
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: "The Unity FBX Exporter package makes it easy to send geometry and
+    animation to any application that supports the FBX format and send them back
+    to Unity with minimal effort.\n\nIn particular, this round-trip workflow enables
+    you to export Unity Scenes to FBX files, import them into Autodesk\xAE Maya\xAE,
+    Autodesk\xAE Maya LT\u2122, or Autodesk\xAE 3ds Max\xAE using an artist-friendly
+    interface, export Unity-ready FBX geometry and animation, and safely merge your
+    changes back into those Assets to continue your work in Unity."
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 2.0.1-preview.2
+    - 2.0.1-preview.3
+    - 2.0.1-preview.4
+    - 2.0.1-preview.5
+    - 2.0.1-preview.11
+    - 2.0.2-preview.1
+    - 2.0.3-preview.3
+    - 3.0.0-preview.2
+    - 3.0.1-preview.2
+    - 3.1.0-preview.1
+    - 3.2.0-preview.2
+    - 3.2.1-preview.2
+    - 4.0.0-pre.1
+    - 4.0.0-pre.4
+    - 4.0.1
+    - 4.1.0-pre.2
+    - 4.1.0
+    - 4.1.1
+    - 4.1.2
+    - 4.2.0-pre.1
+    compatible:
+    - 4.1.2
+    - 4.2.0-pre.1
+    verified: 4.1.2
+  dependencies:
+  - name: com.unity.timeline
+    version: 1.5.2
+  - name: com.autodesk.fbx
+    version: 4.1.1
+  resolvedDependencies:
+  - name: com.unity.timeline
+    version: 1.6.4
+  - name: com.unity.modules.director
+    version: 1.0.0
+  - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
+  - name: com.unity.modules.particlesystem
+    version: 1.0.0
+  - name: com.autodesk.fbx
+    version: 4.1.1
+  keywords:
+  - fbx
+  - animation
+  - modeling
+  - maya
+  - max
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637733605130000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.formats.fbx.git
+    revision: 2daae3674ab93a799fbb71611abb1440e5d0e527
+    path: 
+  unityLifecycle:
+    version: 4.1.2
+    nextVersion: 
+- packageId: com.unity.formats.alembic@2.2.2
+  testable: 0
+  isDirectDependency: 0
+  version: 2.2.2
+  source: 1
+  resolvedPath: D:\unityproject\Example\Sturdy-Barnacle\Library\PackageCache\com.unity.formats.alembic@2.2.2
+  assetPath: Packages/com.unity.formats.alembic
+  name: com.unity.formats.alembic
+  displayName: Alembic
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: 'Import and export Alembic files (.abc), record and stream animations
+    in the Alembic format directly in Unity.
+
+    NOTE: Supported build platforms:
+    only Windows 64, MacOS X, Linux 64, and Stadia.
+
+
+    The Alembic format is commonly
+    used in animation to transfer facial, cloth, and other simulation between applications
+    in the form of baked data.'
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.1.2-preview
+    - 1.0.0-preview.2
+    - 1.0.0-preview.7
+    - 1.0.0-preview.8
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 1.0.3
+    - 1.0.4
+    - 1.0.5
+    - 1.0.6
+    - 1.0.7
+    - 2.0.0-preview.1
+    - 2.0.1-preview.1
+    - 2.1.0-preview.3
+    - 2.1.1-pre.1
+    - 2.1.2
+    - 2.1.3
+    - 2.2.0-exp.1
+    - 2.2.0-exp.2
+    - 2.2.0-pre.3
+    - 2.2.0-pre.4
+    - 2.2.0
+    - 2.2.1
+    - 2.2.2
+    - 2.3.0-pre.1
+    - 2.3.0-pre.2
+    - 2.3.0-pre.3
+    - 2.3.0
+    compatible:
+    - 2.2.2
+    - 2.3.0-pre.1
+    - 2.3.0-pre.2
+    - 2.3.0-pre.3
+    - 2.3.0
+    verified: 2.2.2
+  dependencies:
+  - name: com.unity.timeline
+    version: 1.0.0
+  - name: com.unity.modules.cloth
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.timeline
+    version: 1.6.4
+  - name: com.unity.modules.director
+    version: 1.0.0
+  - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
+  - name: com.unity.modules.particlesystem
+    version: 1.0.0
+  - name: com.unity.modules.cloth
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  keywords:
+  - alembic
+  - abc
+  - animation
+  - facial
+  - cloth
+  - simulation
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637660953620000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: git+https://github.com/Unity-Technologies/com.unity.formats.alembic.git
+    revision: 4862c73a13ae0cd4ec3489e4356301d0b3c75c2a
+    path: 
+  unityLifecycle:
+    version: 2.2.2
+    nextVersion: 
+- packageId: com.unity.cinemachine@2.8.4
+  testable: 0
+  isDirectDependency: 0
+  version: 2.8.4
+  source: 1
+  resolvedPath: D:\unityproject\Example\Sturdy-Barnacle\Library\PackageCache\com.unity.cinemachine@2.8.4
+  assetPath: Packages/com.unity.cinemachine
+  name: com.unity.cinemachine
+  displayName: Cinemachine
+  author:
+    name: 
+    email: 
+    url: 
+  category: cinematography
+  type: 
+  description: "Smart camera tools for passionate creators. \n\nNew starting from
+    2.7.1: Are you looking for the Cinemachine menu? It has moved to the GameObject
+    menu.\n\nIMPORTANT NOTE: If you are upgrading from the legacy Asset Store version
+    of Cinemachine, delete the Cinemachine asset from your project BEFORE installing
+    this version from the Package Manager."
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 2.1.11-beta.1
+    - 2.1.12
+    - 2.1.13
+    - 2.2.0
+    - 2.2.7
+    - 2.2.8
+    - 2.2.9
+    - 2.2.10-preview.3
+    - 2.2.10-preview.4
+    - 2.3.1
+    - 2.3.3
+    - 2.3.4
+    - 2.3.5-preview.3
+    - 2.4.0-preview.3
+    - 2.4.0-preview.4
+    - 2.4.0-preview.6
+    - 2.4.0-preview.7
+    - 2.4.0-preview.8
+    - 2.4.0-preview.9
+    - 2.4.0-preview.10
+    - 2.4.0
+    - 2.5.0
+    - 2.6.0-preview.2
+    - 2.6.0-preview.3
+    - 2.6.0-preview.5
+    - 2.6.0-preview.8
+    - 2.6.0
+    - 2.6.1-preview.6
+    - 2.6.1
+    - 2.6.2-preview.1
+    - 2.6.2
+    - 2.6.3-preview.2
+    - 2.6.3
+    - 2.6.4
+    - 2.6.5
+    - 2.6.9
+    - 2.6.10
+    - 2.6.11
+    - 2.7.1
+    - 2.7.2
+    - 2.7.3
+    - 2.7.4
+    - 2.7.5
+    - 2.7.8
+    - 2.7.9
+    - 2.8.0-exp.1
+    - 2.8.0-exp.2
+    - 2.8.0-pre.1
+    - 2.8.0
+    - 2.8.1
+    - 2.8.2
+    - 2.8.3
+    - 2.8.4
+    - 2.9.0-pre.1
+    - 2.9.0-pre.6
+    compatible:
+    - 2.8.4
+    - 2.9.0-pre.1
+    - 2.9.0-pre.6
+    verified: 2.8.4
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - camera
+  - follow
+  - rig
+  - fps
+  - cinematography
+  - aim
+  - orbit
+  - cutscene
+  - cinematic
+  - collision
+  - freelook
+  - cinemachine
+  - compose
+  - composition
+  - dolly
+  - track
+  - clearshot
+  - noise
+  - framing
+  - handheld
+  - lens
+  - impulse
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637755930770000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.cinemachine.git
+    revision: 15a386e047f93d18479f6ae075bd3dcc985d3c34
+    path: 
+  unityLifecycle:
+    version: 2.8.4
+    nextVersion: 
+- packageId: com.unity.recorder@3.0.3
+  testable: 0
+  isDirectDependency: 0
+  version: 3.0.3
+  source: 1
+  resolvedPath: D:\unityproject\Example\Sturdy-Barnacle\Library\PackageCache\com.unity.recorder@3.0.3
+  assetPath: Packages/com.unity.recorder
+  name: com.unity.recorder
+  displayName: Recorder
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: 'The Recorder allows you to capture and save data from the Unity Editor
+    during Play mode: animations, videos, images, audio, arbitrary output variables
+    (AOVs), and more.'
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 2.0.0-preview.6
+    - 2.0.1-preview.1
+    - 2.0.2-preview.3
+    - 2.0.3-preview.1
+    - 2.1.0-preview.1
+    - 2.2.0-preview.4
+    - 2.3.0-preview.3
+    - 2.4.0-preview.1
+    - 2.5.0-pre.1
+    - 2.5.2
+    - 2.5.4
+    - 2.5.5
+    - 2.5.7
+    - 2.6.0-exp.3
+    - 2.6.0-exp.4
+    - 3.0.0-pre.1
+    - 3.0.0-pre.2
+    - 3.0.0
+    - 3.0.1
+    - 3.0.2
+    - 3.0.3
+    - 4.0.0-pre.1
+    - 4.0.0-pre.2
+    - 4.0.0-pre.3
+    - 4.0.0-pre.4
+    compatible:
+    - 3.0.3
+    - 4.0.0-pre.1
+    - 4.0.0-pre.2
+    - 4.0.0-pre.3
+    verified: 3.0.3
+  dependencies:
+  - name: com.unity.timeline
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.timeline
+    version: 1.6.4
+  - name: com.unity.modules.director
+    version: 1.0.0
+  - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
+  - name: com.unity.modules.particlesystem
+    version: 1.0.0
+  keywords:
+  - unity
+  - recorder
+  - recording
+  - capture
+  - video
+  - animation
+  - clip
+  - images
+  - AOV
+  - render
+  - pass
+  - layer
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637726685330000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.recorder.git
+    revision: 52d2b7e77e6832f279e4de2172226475c5465729
+    path: 
+  unityLifecycle:
+    version: 3.0.3
+    nextVersion: 
 - packageId: com.unity.services.core@1.3.1
   testable: 0
   isDirectDependency: 0
@@ -3136,10 +3766,12 @@ m_ResolvedPackages:
     - 1.3.1
     - 1.3.2
     - 1.4.0
+    - 1.4.1
     compatible:
     - 1.3.1
     - 1.3.2
     - 1.4.0
+    - 1.4.1
     verified: 1.3.2
   dependencies:
   - name: com.unity.modules.unitywebrequest
@@ -3232,6 +3864,76 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.0.3
+    nextVersion: 
+- packageId: com.autodesk.fbx@4.1.1
+  testable: 0
+  isDirectDependency: 0
+  version: 4.1.1
+  source: 1
+  resolvedPath: D:\unityproject\Example\Sturdy-Barnacle\Library\PackageCache\com.autodesk.fbx@4.1.1
+  assetPath: Packages/com.autodesk.fbx
+  name: com.autodesk.fbx
+  displayName: Autodesk FBX SDK for Unity
+  author:
+    name: Unity
+    email: 
+    url: 
+  category: 
+  type: 
+  description: "This package provides Unity C# bindings to the Autodesk\xAE FBX\xAE
+    SDK."
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 2.0.0-preview
+    - 2.0.0-preview.4
+    - 2.0.0-preview.5
+    - 2.0.0-preview.6
+    - 2.0.0-preview.7
+    - 2.0.1-preview.1
+    - 3.0.0-preview.1
+    - 3.0.1-preview.1
+    - 3.1.0-preview.1
+    - 3.1.0-preview.2
+    - 4.0.0-pre.1
+    - 4.0.0-pre.2
+    - 4.0.1
+    - 4.1.0-pre.1
+    - 4.1.0
+    - 4.1.1
+    - 4.2.0-pre.1
+    compatible:
+    - 4.1.1
+    - 4.2.0-pre.1
+    verified: 4.1.1
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - fbx
+  - animation
+  - modeling
+  - maya
+  - max
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637668642230000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: git+https://github.com/Unity-Technologies/com.autodesk.fbx.git
+    revision: b6cd1211ff8824752e3dcbf05f426bac266606a0
+    path: 
+  unityLifecycle:
+    version: 4.1.1
     nextVersion: 
 - packageId: com.unity.nuget.newtonsoft-json@3.0.2
   testable: 0

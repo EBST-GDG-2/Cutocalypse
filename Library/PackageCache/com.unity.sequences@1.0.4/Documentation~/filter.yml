@@ -1,0 +1,23 @@
+﻿apiRules:
+  - exclude:
+      uidRegex: ^UnityEngine\.Sequences\.Timeline\.NestedTimeline
+      type: Class
+  - exclude:
+      uidRegex: ^UnityEditor\.Sequences\.Timeline\.Storyboard
+      type: Class
+  - exclude:
+      uidRegex: UnityEditor.Sequences.SequenceAssetInspector
+      type: Class
+  - exclude:
+      uidRegex: UnityEngine\.Sequences\.Timeline\.Storyboard.*Behaviour
+      type: Class
+  - exclude:
+      uidRegex: UnityEngine.Sequences.Timeline.TrackAssetExtensions
+      type: Class
+  - exclude:
+      uidRegex: ^UnityEngine\.Sequences\.SceneReference\.On.*\Serialize
+      type: Method
+  - exclude:
+      uidRegex: ^(Samples)
+  - exclude:
+      uidRegex: ^(Tests)

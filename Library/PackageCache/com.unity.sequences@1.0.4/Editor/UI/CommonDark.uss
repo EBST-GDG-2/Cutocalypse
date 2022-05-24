@@ -1,0 +1,46 @@
+.seq-header {
+    border-top-color: rgb(26, 26, 26);
+    border-bottom-color: rgb(48, 48, 48);
+}
+
+.seq-header-text {
+    background-color: rgb(62, 62, 62);
+}
+
+.seq-add-dropdown:hover, .seq-add-dropdown:active {
+    background-color: rgb(71, 71, 71);
+}
+
+.seq-menu-button:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+.seq-list-header {
+    border-color: rgb(36, 36, 36);
+}
+
+.seq-list-content {
+    background-color: rgb(65, 65, 65);
+    border-color: rgb(36, 36, 36);
+}
+
+.seq-list-item:hover {
+    background-color: rgb(77, 77, 77);
+}
+
+.seq-list-item--selected {
+    background-color: rgb(44, 93, 135);
+}
+
+.seq-list-item--selected:hover {
+    background-color: rgb(58, 114, 176);
+}
+
+.seq-list-footer-buttons {
+    background-color: rgb(65, 65, 65);
+    border-color: rgb(36, 36, 36);
+}
+
+.seq-list-footer-buttons Button:hover {
+    background-color: rgb(71, 71, 71);
+}

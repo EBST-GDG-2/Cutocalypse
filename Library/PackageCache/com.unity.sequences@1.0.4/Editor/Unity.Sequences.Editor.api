@@ -1,0 +1,89 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+namespace UnityEditor.Sequences
+{
+    [System.Runtime.CompilerServices.Extension] public static class MasterSequenceExtensions
+    {
+        [System.Runtime.CompilerServices.Extension] public static void Delete(UnityEngine.Sequences.MasterSequence masterSequence);
+        [System.Runtime.CompilerServices.Extension] public static bool Rename(UnityEngine.Sequences.MasterSequence masterSequence, string newName);
+        [System.Runtime.CompilerServices.Extension] public static void Save(UnityEngine.Sequences.MasterSequence masterSequence, string folder = default(string));
+    }
+
+    public class SceneManagement
+    {
+        public SceneManagement() {}
+        public static bool AddNewScene(UnityEngine.Sequences.TimelineSequence sequence);
+        public static void CloseScene(string path);
+        public static bool IsLoaded(string path);
+        public static void OpenAllScenes(UnityEngine.Sequences.TimelineSequence sequence, bool deactivate = False);
+        public static void OpenScene(string path, bool deactivate = False);
+    }
+
+    public class SequenceAssetException : System.Exception
+    {
+        public SequenceAssetException(string message) {}
+    }
+
+    [UnityEditor.CustomEditor(typeof(UnityEngine.Sequences.SequenceAsset))] public class SequenceAssetInspector : UnityEditor.Editor
+    {
+        public SequenceAssetInspector() {}
+        public virtual void OnInspectorGUI();
+    }
+
+    [System.Runtime.CompilerServices.Extension] public static class SequenceAssetUtility
+    {
+        public static UnityEngine.GameObject CreateSource(string name, string type = default(string), bool animate = True, bool instantiate = False);
+        public static UnityEngine.GameObject CreateVariant(UnityEngine.GameObject source, bool instantiate = False);
+        public static bool DeleteSourceAsset(UnityEngine.GameObject source, bool deleteVariants = True);
+        public static bool DeleteVariantAsset(UnityEngine.GameObject variant);
+        public static UnityEngine.GameObject DuplicateVariant(UnityEngine.GameObject variant);
+        [System.Runtime.CompilerServices.IteratorStateMachine(typeof(UnityEditor.Sequences.SequenceAssetUtility.<FindAllSources>d__16))] public static System.Collections.Generic.IEnumerable<UnityEngine.GameObject> FindAllSources(string type = default(string));
+        public static System.Collections.Generic.IEnumerable<UnityEngine.GameObject> GetInstancesInSequence(UnityEngine.Playables.PlayableDirector sequenceDirector, string type = default(string));
+        public static UnityEngine.GameObject GetSource(UnityEngine.GameObject prefab);
+        public static string GetType(UnityEngine.GameObject prefab);
+        public static System.Collections.Generic.IEnumerable<UnityEngine.GameObject> GetVariants(UnityEngine.GameObject source);
+        public static bool HasVariants(UnityEngine.GameObject source);
+        public static UnityEngine.GameObject InstantiateInSequence(UnityEngine.GameObject prefab, UnityEngine.Playables.PlayableDirector sequenceDirector, UnityEngine.Timeline.TimelineClip clip = default(UnityEngine.Timeline.TimelineClip));
+        public static bool IsSequenceAsset(UnityEngine.GameObject prefab);
+        public static bool IsSource(UnityEngine.GameObject prefab);
+        public static bool IsVariant(UnityEngine.GameObject prefab);
+        public static void RemoveFromSequence(UnityEngine.GameObject instance, UnityEngine.Playables.PlayableDirector sequenceDirector);
+        public static string Rename(UnityEngine.GameObject prefab, string oldName, string newName, bool renameVariants = True, bool renameInstances = True);
+        public static UnityEngine.GameObject UpdateInstanceInSequence(UnityEngine.GameObject oldInstance, UnityEngine.GameObject newPrefab, UnityEngine.Playables.PlayableDirector sequenceDirector, UnityEditor.InteractionMode interactionMode = 1);
+    }
+
+    public static class SequenceUtility
+    {
+        public static event System.Action<UnityEngine.Sequences.TimelineSequence, UnityEngine.Sequences.MasterSequence> sequenceCreated;
+        public static event System.Action sequenceDeleted;
+        public static UnityEngine.Sequences.MasterSequence CreateMasterSequence(string name, float fps = -1);
+        public static UnityEngine.Sequences.TimelineSequence CreateSequence(string name, UnityEngine.Sequences.MasterSequence masterSequence, UnityEngine.Sequences.TimelineSequence parent = default(UnityEngine.Sequences.TimelineSequence));
+        public static void DeleteSequence(UnityEngine.Sequences.TimelineSequence sequence, UnityEngine.Sequences.MasterSequence masterSequence);
+    }
+
+    [System.Runtime.CompilerServices.Extension] public static class TimelineSequenceExtensions
+    {
+        [System.Runtime.CompilerServices.Extension] public static void Delete(UnityEngine.Sequences.TimelineSequence clip);
+        [System.Runtime.CompilerServices.Extension] public static void Record(UnityEngine.Sequences.TimelineSequence clip, bool recordAs = False);
+        [System.Runtime.CompilerServices.Extension] public static void Rename(UnityEngine.Sequences.TimelineSequence clip, string newName);
+        [System.Runtime.CompilerServices.Extension] public static void Save(UnityEngine.Sequences.TimelineSequence clip, string folder = default(string));
+    }
+}
+
+namespace UnityEditor.Sequences.Timeline
+{
+    [UnityEditor.Timeline.CustomTimelineEditor(typeof(UnityEngine.Sequences.Timeline.StoryboardPlayableAsset))] public class StoryboardClipEditor : UnityEditor.Timeline.ClipEditor
+    {
+        public StoryboardClipEditor() {}
+        public virtual void DrawBackground(UnityEngine.Timeline.TimelineClip clip, UnityEditor.Timeline.ClipBackgroundRegion region);
+        public virtual UnityEditor.Timeline.ClipDrawOptions GetClipOptions(UnityEngine.Timeline.TimelineClip clip);
+        public virtual void OnCreate(UnityEngine.Timeline.TimelineClip clip, UnityEngine.Timeline.TrackAsset track, UnityEngine.Timeline.TimelineClip clonedFrom);
+    }
+
+    [UnityEditor.Timeline.CustomTimelineEditor(typeof(UnityEngine.Sequences.Timeline.StoryboardTrack))] public class StoryboardTrackEditor : UnityEditor.Timeline.TrackEditor
+    {
+        public StoryboardTrackEditor() {}
+        public virtual UnityEditor.Timeline.TrackDrawOptions GetTrackOptions(UnityEngine.Timeline.TrackAsset track, UnityEngine.Object binding);
+    }
+}

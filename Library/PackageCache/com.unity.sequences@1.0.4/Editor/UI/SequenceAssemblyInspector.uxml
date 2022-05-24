@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Template name="SinglePopupField" src="SinglePopupField.uxml" />
+    <ui:VisualElement style="flex-shrink: 0;">
+        <ui:VisualElement style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex;">
+            <ui:Label text="Shot10 - 4 friends forever" name="seq-sequence-static-name" style="display: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="margin-left: 10px; margin-right: 10px; margin-top: 0; margin-bottom: 10px;">
+            <ui:TextField label="Name" name="seq-sequence-name" binding-path="m_Name" readonly="true" class="seq-flex-label" />
+            <ui:VisualElement style="flex-direction: row; justify-content: space-between; display: none;">
+                <uie:FloatField label="Duration" value="42.2" name="seq-sequence-duration" style="flex-grow: 1;" />
+                <ui:Instance template="SinglePopupField" style="width: 120px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row; display: none;">
+                <ui:Label text="Variant" style="margin-right: 70px; margin-left: 4px;" />
+                <ui:VisualElement class="unity-base-field__input" style="flex-direction: row;">
+                    <ui:Button text="+" />
+                    <ui:Button text="Duplicate" />
+                    <ui:Instance template="SinglePopupField" style="width: auto; min-width: auto; flex-basis: 47%; flex-grow: 1;" />
+                    <ui:Button text="Save" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:ScrollView>
+        <ui:VisualElement name="seq-asset-collections" class="seq-asset-collection">
+            <uie:ObjectField label="Set / Lighting" allow-scene-objects="false" name="seq-sequence-set" binding-path="m_LightingBakeAsset" class="seq-flex-label" style="display: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="border-top-width: 0.1px; border-top-color: rgb(0, 0, 0); visibility: visible; height: 100px; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; flex-grow: 1; flex-shrink: 0; display: none;">
+            <ui:Button text="Open Recorder" />
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>

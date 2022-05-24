@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement style="flex-direction: row; flex-shrink: 0;">
+        <ui:Button text="&#10;" name="add_dropdown" tooltip="Add a new Master Sequence in Structure or a new Sequence Asset in Asset Collections." class="seq-add-dropdown">
+            <ui:Label text="&#10;" class="seq-create-add-new" />
+            <ui:Label text="&#10;" class="seq-dropdown" />
+        </ui:Button>
+    </ui:VisualElement>
+    <uie:TwoPaneSplitView fixed-pane-index="0" fixed-pane-initial-size="200" orientation="vertical" style="flex-shrink: 0;">
+        <ui:VisualElement name="sequences_structure" style="height: 533px; margin-top: 0; display: flex;">
+            <ui:Label text="Structure" tooltip="The editorial structure of all your Master Sequences. Build the structure here and populate the Sequences through the Sequence Assembly window." class="seq-header seq-header-text" />
+            <ui:IMGUIContainer name="structure_content" style="flex-grow: 1; min-height: auto;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="sequences_asset_collections" style="height: 533px; margin-top: 0; display: flex; border-top-width: 0.5px; border-top-color: rgb(0, 0, 0);">
+            <ui:Label text="Asset Collections" tooltip="All available Sequence Assets and Variants that you can use in your Sequences." class="seq-header seq-header-text" />
+            <ui:IMGUIContainer name="asset_collections_content" style="min-height: auto; flex-grow: 1;" />
+        </ui:VisualElement>
+    </uie:TwoPaneSplitView>
+</ui:UXML>

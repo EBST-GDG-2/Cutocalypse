@@ -1,23 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
+    public HealthBar healthBar;
     [SerializeField] Animator animator;
     private Vector3 hareket;
     [SerializeField] private float hareketHizi, mermiHizi;
-    GameObject kamera;
+    //GameObject kamera;
     [SerializeField] Transform firePoint;
     [SerializeField] GameObject bullet;
     [SerializeField] float jumpingForce;
     float yGravity;
     int jumpCount = 0;
     private bool isDashed = false;
+    public int maxHeatlh = 100;
+    public int currentHealth;
     private void Awake()
     {
-        kamera = GameObject.FindWithTag("MainCamera");
+        currentHealth = maxHeatlh;
+        healthBar.SetMaxHealth(maxHeatlh);
+        //kamera = GameObject.FindWithTag("MainCamera");
     }
 
 
@@ -29,6 +35,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (currentHealth <= 0)
+        {
+            StartCoroutine(Die());
+        }
         if (hareket.x == 0 && hareket.z == 0) 
         {
             animator.SetBool("move", false);
@@ -58,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(mousePos.x, mousePos.y) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
 
-        kamera.transform.position = new Vector3(transform.position.x, transform.position.y + 11, transform.position.z - 6);
+        //kamera.transform.position = new Vector3(transform.position.x, transform.position.y + 11, transform.position.z - 6);
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -90,7 +100,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-    
+    IEnumerator Die()
+    {
+        Destroy(gameObject);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Game");
+
+    }
     void Shooting()
     {
         animator.SetTrigger("shoot");
@@ -101,5 +117,17 @@ public class PlayerMovement : MonoBehaviour
     {
         yGravity = jumpingForce ;
         jumpCount++;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Bullet")
+        {
+            TakeDamage(1);
+        }
+    } 
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
     }
 }

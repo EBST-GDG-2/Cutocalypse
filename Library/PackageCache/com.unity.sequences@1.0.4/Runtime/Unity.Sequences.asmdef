@@ -1,0 +1,22 @@
+{
+    "name": "Unity.Sequences",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f06555f75b070af458a003d92f9efb00"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.timeline",
+            "expression": "1.6.0-pre.5",
+            "define": "TIMELINE_1_6_0_PRE_5_OR_NEWER"
+        }
+    ],
+    "noEngineReferences": false
+}

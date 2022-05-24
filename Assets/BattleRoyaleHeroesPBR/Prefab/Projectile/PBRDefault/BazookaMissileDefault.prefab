@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1010106222352782396}
   - component: {fileID: 2485026293576344193}
   - component: {fileID: 984685245146529478}
+  - component: {fileID: 8930518458735652409}
   m_Layer: 0
   m_Name: BazookaMissileDefault
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,3 +115,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16725685, y: 0.16725677, z: 0.6963769}
   m_Center: {x: 0.000000037252903, y: -0.0000007599592, z: 0.22905129}
+--- !u!114 &8930518458735652409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010106222350519036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06afe8403b0115549821f86dd4f07430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

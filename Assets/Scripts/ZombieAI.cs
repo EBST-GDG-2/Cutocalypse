@@ -18,7 +18,6 @@ public class ZombieAI : MonoBehaviour
     bool walkPointSet;
     public float walkPointRange;
 
-    public float timeBetweenAttacks;
     bool alreadyAttacked;
 
     public float sightRange, attackRange;
@@ -53,6 +52,11 @@ public class ZombieAI : MonoBehaviour
         if (currentHealth <= 0)
         {
             StartCoroutine(Die());
+        }
+        if (!zombieAsset.GetCurrentAnimatorStateInfo(0).IsName("zombie_attack"))
+        {
+            attackArea.SetActive(false);
+            alreadyAttacked = false;
         }
     }
 
@@ -101,24 +105,17 @@ public class ZombieAI : MonoBehaviour
         if (!alreadyAttacked)
         {
             alreadyAttacked = true;
-            StartCoroutine(ResetAttack(timeBetweenAttacks));
+            attackArea.SetActive(true);
+            zombieAsset.SetTrigger("Attack");
         }
     }
     IEnumerator Die()
     {
         zombieAsset.SetTrigger("Dead");
         agent.SetDestination(transform.position);
-        Destroy(attackArea);
+        attackArea.SetActive(false);
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
-    }
-    IEnumerator ResetAttack(float second)
-    {
-        attackArea.SetActive(true);
-        zombieAsset.SetTrigger("Attack");
-        yield return new WaitForSeconds(second);
-        attackArea.SetActive(false);
-        alreadyAttacked = false;
     }
     public void TakeDamage(int damage)
     {

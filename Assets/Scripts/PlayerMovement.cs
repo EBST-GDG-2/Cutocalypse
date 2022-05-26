@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject canv;
+    public Image curs;
     public HealthBar healthBar;
     [SerializeField] Animator animator;
     private Vector3 hareket;
@@ -30,14 +33,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        
+        Cursor.visible = false;
     }
 
     void Update()
     {
+        canv.transform.LookAt(Camera.main.transform.position);
+        
         if (currentHealth <= 0)
         {
-            StartCoroutine(Die());
+            gameObject.SetActive(false);
+            SceneManager.LoadScene("Game");
         }
         if (hareket.x == 0 && hareket.z == 0) 
         {
@@ -60,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 5.23f;
 
-        Vector3 objectPos = UnityEngine.Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 objectPos =Camera.main.WorldToScreenPoint(transform.position);
 
         mousePos.x = mousePos.x - objectPos.x;
         mousePos.y = mousePos.y - objectPos.y;
@@ -74,7 +80,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Shooting();
         }
-
         if (gameObject.GetComponent<CharacterController>().isGrounded)
         {
             yGravity= Physics.gravity.y * Time.deltaTime * 6;
@@ -100,18 +105,18 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-    IEnumerator Die()
-    {
-        Destroy(gameObject);
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("Game");
-
-    }
     void Shooting()
     {
+        StartCoroutine(Curss());
         animator.SetTrigger("shoot");
         GameObject firedBullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
         firedBullet.GetComponent<Rigidbody>().AddForce(firePoint.forward*mermiHizi,ForceMode.Impulse);
+    }
+    IEnumerator Curss()
+    {
+        curs.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        curs.color = Color.white;
     }
     void Jumping()
     {

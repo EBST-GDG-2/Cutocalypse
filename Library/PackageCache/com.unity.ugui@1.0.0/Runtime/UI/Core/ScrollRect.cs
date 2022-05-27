@@ -835,54 +835,51 @@ namespace UnityEngine.UI
             UpdateBounds();
             float deltaTime = Time.unscaledDeltaTime;
             Vector2 offset = CalculateOffset(Vector2.zero);
-            if (deltaTime > 0.0f)
+            if (!m_Dragging && (offset != Vector2.zero || m_Velocity != Vector2.zero))
             {
-                if (!m_Dragging && (offset != Vector2.zero || m_Velocity != Vector2.zero))
+                Vector2 position = m_Content.anchoredPosition;
+                for (int axis = 0; axis < 2; axis++)
                 {
-                    Vector2 position = m_Content.anchoredPosition;
-                    for (int axis = 0; axis < 2; axis++)
+                    // Apply spring physics if movement is elastic and content has an offset from the view.
+                    if (m_MovementType == MovementType.Elastic && offset[axis] != 0)
                     {
-                        // Apply spring physics if movement is elastic and content has an offset from the view.
-                        if (m_MovementType == MovementType.Elastic && offset[axis] != 0)
-                        {
-                            float speed = m_Velocity[axis];
-                            float smoothTime = m_Elasticity;
-                            if (m_Scrolling)
-                                smoothTime *= 3.0f;
-                            position[axis] = Mathf.SmoothDamp(m_Content.anchoredPosition[axis], m_Content.anchoredPosition[axis] + offset[axis], ref speed, smoothTime, Mathf.Infinity, deltaTime);
-                            if (Mathf.Abs(speed) < 1)
-                                speed = 0;
-                            m_Velocity[axis] = speed;
-                        }
-                        // Else move content according to velocity with deceleration applied.
-                        else if (m_Inertia)
-                        {
-                            m_Velocity[axis] *= Mathf.Pow(m_DecelerationRate, deltaTime);
-                            if (Mathf.Abs(m_Velocity[axis]) < 1)
-                                m_Velocity[axis] = 0;
-                            position[axis] += m_Velocity[axis] * deltaTime;
-                        }
-                        // If we have neither elaticity or friction, there shouldn't be any velocity.
-                        else
-                        {
+                        float speed = m_Velocity[axis];
+                        float smoothTime = m_Elasticity;
+                        if (m_Scrolling)
+                            smoothTime *= 3.0f;
+                        position[axis] = Mathf.SmoothDamp(m_Content.anchoredPosition[axis], m_Content.anchoredPosition[axis] + offset[axis], ref speed, smoothTime, Mathf.Infinity, deltaTime);
+                        if (Mathf.Abs(speed) < 1)
+                            speed = 0;
+                        m_Velocity[axis] = speed;
+                    }
+                    // Else move content according to velocity with deceleration applied.
+                    else if (m_Inertia)
+                    {
+                        m_Velocity[axis] *= Mathf.Pow(m_DecelerationRate, deltaTime);
+                        if (Mathf.Abs(m_Velocity[axis]) < 1)
                             m_Velocity[axis] = 0;
-                        }
+                        position[axis] += m_Velocity[axis] * deltaTime;
                     }
-
-                    if (m_MovementType == MovementType.Clamped)
+                    // If we have neither elaticity or friction, there shouldn't be any velocity.
+                    else
                     {
-                        offset = CalculateOffset(position - m_Content.anchoredPosition);
-                        position += offset;
+                        m_Velocity[axis] = 0;
                     }
-
-                    SetContentAnchoredPosition(position);
                 }
 
-                if (m_Dragging && m_Inertia)
+                if (m_MovementType == MovementType.Clamped)
                 {
-                    Vector3 newVelocity = (m_Content.anchoredPosition - m_PrevPosition) / deltaTime;
-                    m_Velocity = Vector3.Lerp(m_Velocity, newVelocity, deltaTime * 10);
+                    offset = CalculateOffset(position - m_Content.anchoredPosition);
+                    position += offset;
                 }
+
+                SetContentAnchoredPosition(position);
+            }
+
+            if (m_Dragging && m_Inertia)
+            {
+                Vector3 newVelocity = (m_Content.anchoredPosition - m_PrevPosition) / deltaTime;
+                m_Velocity = Vector3.Lerp(m_Velocity, newVelocity, deltaTime * 10);
             }
 
             if (m_ViewBounds != m_PrevViewBounds || m_ContentBounds != m_PrevContentBounds || m_Content.anchoredPosition != m_PrevPosition)

@@ -493,10 +493,10 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 8
+  coin: {fileID: 0}
   walkPoint: {x: 100, y: 0, z: 100}
   walkPointRange: 100
-  timeBetweenAttacks: 1
-  sightRange: 25
+  sightRange: 50
   attackRange: 1
   playerInSightRange: 0
   playerInAttackRan: 0

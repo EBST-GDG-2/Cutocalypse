@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject canv;
-    public Image curs;
+    public Texture2D curs;
+    private TextMeshProUGUI tmpGUI;
     public HealthBar healthBar;
     [SerializeField] Animator animator;
     private Vector3 hareket;
     [SerializeField] private float hareketHizi, mermiHizi;
     //GameObject kamera;
+    public Texture2D cursorTexture;
     [SerializeField] Transform firePoint;
     [SerializeField] GameObject bullet;
     [SerializeField] float jumpingForce;
@@ -26,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         currentHealth = maxHeatlh;
         healthBar.SetMaxHealth(maxHeatlh);
+        tmpGUI = GameObject.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
         //kamera = GameObject.FindWithTag("MainCamera");
     }
 
@@ -33,9 +38,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        Cursor.visible = false;
-    }
 
+        //Cursor.visible = false;
+        cursorTexture = curs;
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+    }
     void Update()
     {
         canv.transform.LookAt(Camera.main.transform.position);
@@ -107,17 +114,18 @@ public class PlayerMovement : MonoBehaviour
     }
     void Shooting()
     {
-        StartCoroutine(Curss());
+        //StartCoroutine(Curss());
         animator.SetTrigger("shoot");
         GameObject firedBullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
         firedBullet.GetComponent<Rigidbody>().AddForce(firePoint.forward*mermiHizi,ForceMode.Impulse);
     }
-    IEnumerator Curss()
+    /*IEnumerator Curss()
     {
         curs.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         curs.color = Color.white;
     }
+    */
     void Jumping()
     {
         yGravity = jumpingForce ;
@@ -128,6 +136,12 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "Bullet")
         {
             TakeDamage(1);
+        }
+
+        if (other.gameObject.tag == "Coin")
+        {
+            tmpGUI.text = (int.Parse(tmpGUI.text) + 5).ToString();
+            Destroy(other.gameObject);
         }
     } 
     void TakeDamage(int damage)

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class ZombieAI : MonoBehaviour
 {
+    
     public Animator zombieAsset;
     public HealthBar healthBar;
     public int maxHeatlh = 4;
@@ -13,11 +15,13 @@ public class ZombieAI : MonoBehaviour
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
+    [SerializeField] private GameObject coin;
 
     public Vector3 walkPoint;
+    bool alive;
     bool walkPointSet;
     public float walkPointRange;
-
+    private int Puan;
     bool alreadyAttacked;
 
     public float sightRange, attackRange;
@@ -26,9 +30,11 @@ public class ZombieAI : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        coin = GameObject.Find("Coin");
         agent = gameObject.GetComponent<NavMeshAgent>();
         currentHealth = maxHeatlh;
         healthBar.SetMaxHealth(maxHeatlh);
+        alive = true;
     }
 
     private void Update()
@@ -37,15 +43,15 @@ public class ZombieAI : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRan = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRan)
+        if (!playerInSightRange && !playerInAttackRan && alive)
         {
             Patroling();
         }
-        if (playerInSightRange && !playerInAttackRan)
+        if (playerInSightRange && !playerInAttackRan && alive)
         {
             ChasePlayer();
         }
-        if (playerInSightRange && playerInAttackRan)
+        if (playerInSightRange && playerInAttackRan && alive)
         {
             AttackPlayer();
         }
@@ -111,11 +117,16 @@ public class ZombieAI : MonoBehaviour
     }
     IEnumerator Die()
     {
+        alive = false;
+        gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
         zombieAsset.SetTrigger("Dead");
         agent.SetDestination(transform.position);
         attackArea.SetActive(false);
+        canvas.SetActive(false);
         yield return new WaitForSeconds(2);
+        Instantiate(coin, gameObject.transform.position, gameObject.transform.rotation);
         Destroy(gameObject);
+        
     }
     public void TakeDamage(int damage)
     {

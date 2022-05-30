@@ -20,10 +20,13 @@ public class PlayerMovement : MonoBehaviour
     public Texture2D cursorTexture;
     [SerializeField] Transform firePoint;
     [SerializeField] GameObject bullet;
+    [SerializeField] GameObject muzzleFlash;
     [SerializeField] float jumpingForce;
     float yGravity;
     int jumpCount = 0;
+    private Vector3 direction;
     private bool isDashed = false;
+    private bool atesetti = false;
     public int maxHeatlh = 100;
     public int currentHealth;
     private void Awake()
@@ -31,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
         currentHealth = maxHeatlh;
         healthBar.SetMaxHealth(maxHeatlh);
         tmpGUI = GameObject.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
+        cursorTexture = curs;
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
         //kamera = GameObject.FindWithTag("MainCamera");
     }
 
@@ -40,8 +45,10 @@ public class PlayerMovement : MonoBehaviour
     {
 
         //Cursor.visible = false;
-        cursorTexture = curs;
-        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+        animator.SetBool("fwd", false);
+        animator.SetBool("left", false);
+        animator.SetBool("right", false);
+        animator.SetBool("bwd", false);
     }
     void Update()
     {
@@ -52,24 +59,13 @@ public class PlayerMovement : MonoBehaviour
             gameObject.SetActive(false);
             SceneManager.LoadScene("Game");
         }
-        if (hareket.x == 0 && hareket.z == 0) 
-        {
-            animator.SetBool("move", false);
-        }
-        else
-        {
-            animator.SetBool("move", true);
-        }
-        if (Input.GetKeyDown(KeyCode.LeftShift)&&isDashed==false)
-        {
-            isDashed = true;
-            animator.SetTrigger("dash");
-        }
+
+        PlayerControl();
 
 
         hareket.x = Input.GetAxis("Horizontal") * hareketHizi;
         hareket.z = Input.GetAxis("Vertical") * hareketHizi;
-        gameObject.GetComponent<CharacterController>().Move(hareket*Time.deltaTime);
+        gameObject.GetComponent<CharacterController>().SimpleMove(hareket);
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 5.23f;
 
@@ -95,15 +91,6 @@ public class PlayerMovement : MonoBehaviour
         {
             yGravity += Physics.gravity.y * Time.deltaTime * 6;
         }
-
-        if (Input.GetKeyDown("space")&&jumpCount<3)
-        {
-            Jumping();
-        }
-        if (gameObject.GetComponent<CharacterController>().isGrounded)
-        {
-            jumpCount = 1;
-        }
         hareket.y = yGravity;
 
         if (gameObject.GetComponent<CharacterController>().isGrounded)
@@ -115,10 +102,13 @@ public class PlayerMovement : MonoBehaviour
     void Shooting()
     {
         //StartCoroutine(Curss());
+        Instantiate(muzzleFlash, firePoint);
         animator.SetTrigger("shoot");
         GameObject firedBullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
         firedBullet.GetComponent<Rigidbody>().AddForce(firePoint.forward*mermiHizi,ForceMode.Impulse);
     }
+
+
     /*IEnumerator Curss()
     {
         curs.color = Color.red;
@@ -126,11 +116,6 @@ public class PlayerMovement : MonoBehaviour
         curs.color = Color.white;
     }
     */
-    void Jumping()
-    {
-        yGravity = jumpingForce ;
-        jumpCount++;
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Bullet")
@@ -140,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.tag == "Coin")
         {
-            tmpGUI.text = (int.Parse(tmpGUI.text) + 5).ToString();
+            tmpGUI.text = (int.Parse(tmpGUI.text) + Random.Range(5,10)).ToString();
             Destroy(other.gameObject);
         }
     } 
@@ -148,5 +133,174 @@ public class PlayerMovement : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+    }
+    public void PlayerControl()
+    {
+        direction = firePoint.transform.position - gameObject.transform.position;
+        if (direction.x > 0)
+        {
+            if (Input.GetAxis("Vertical") > 0)
+            {
+                animator.SetBool("FW", true);
+                animator.SetBool("BW", false);
+            }
+            else if (Input.GetAxis("Vertical") < 0)
+            {
+                animator.SetBool("BW", true);
+                animator.SetBool("FW", false);
+            }
+            else
+            {
+                animator.SetBool("BW", false);
+                animator.SetBool("FW", false);
+            }
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                animator.SetBool("R", true);
+                animator.SetBool("L", false);
+                Debug.Log("sag");
+                Debug.Log(direction.x.ToString() + "  " + direction.z.ToString());
+            }
+            else if (Input.GetAxis("Horizontal") < 0)
+            {
+                animator.SetBool("L", true);
+                animator.SetBool("R", false);
+                Debug.Log("sol");
+                Debug.Log(direction.x.ToString() + "  " + direction.z.ToString());
+            }
+            else
+            {
+                animator.SetBool("R", false);
+                animator.SetBool("L", false);
+            }
+        }
+        if (direction.x < 0)
+        {
+            if (Input.GetAxis("Vertical") > 0)
+            {
+                animator.SetBool("FW", false);
+                animator.SetBool("BW", true);
+            }
+            else if (Input.GetAxis("Vertical") < 0)
+            {
+                animator.SetBool("BW", false);
+                animator.SetBool("FW", true);
+            }
+            else
+            {
+                animator.SetBool("BW", false);
+                animator.SetBool("FW", false);
+            }
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                animator.SetBool("R", false);
+                animator.SetBool("L", true);
+                Debug.Log(direction.x.ToString() + "  " + direction.z.ToString());
+            }
+            else if (Input.GetAxis("Horizontal") < 0)
+            {
+                animator.SetBool("L", false);
+                animator.SetBool("R", true); 
+                Debug.Log(direction.x.ToString() + "  " + direction.z.ToString());
+            }
+            else
+            {
+                animator.SetBool("R", false);
+                animator.SetBool("L", false);
+            }
+        }
+
+        //if (direction.z > 0)
+        //{
+        //    if (Input.GetAxis("Vertical") > 0)
+        //    {
+        //        animator.SetBool("L", true);
+        //        animator.SetBool("R", false);
+        //    }
+        //    else if (Input.GetAxis("Vertical") < 0)
+        //    {
+        //        animator.SetBool("R", true);
+        //        animator.SetBool("L", false);
+        //    }
+        //    else
+        //    {
+        //        animator.SetBool("BW", false);
+        //        animator.SetBool("FW", false);
+        //    }
+        //    if (Input.GetAxis("Horizontal") > 0)
+        //    {
+        //        animator.SetBool("FW", true);
+        //        animator.SetBool("BW", false);
+        //    }
+        //    else if (Input.GetAxis("Horizontal") < 0)
+        //    {
+        //        animator.SetBool("BW", true);
+        //        animator.SetBool("FW", false);
+        //    }
+        //    else
+        //    {
+        //        animator.SetBool("R", false);
+        //        animator.SetBool("L", false);
+        //    }
+        //}
+
+        //if (direction.z < 0)
+        //{
+        //    if (Input.GetAxis("Vertical") > 0)
+        //    {
+        //        animator.SetBool("L", false);
+        //        animator.SetBool("R", true);
+        //    }
+        //    else if (Input.GetAxis("Vertical") < 0)
+        //    {
+        //        animator.SetBool("R", false);
+        //        animator.SetBool("L", true);
+        //    }
+        //    else
+        //    {
+        //        animator.SetBool("BW", false);
+        //        animator.SetBool("FW", false);
+        //    }
+        //    if (Input.GetAxis("Horizontal") > 0)
+        //    {
+        //        animator.SetBool("FW", false);
+        //        animator.SetBool("BW", true);
+        //    }
+        //    else if (Input.GetAxis("Horizontal") < 0)
+        //    {
+        //        animator.SetBool("BW", false);
+        //        animator.SetBool("FW", true);
+        //    }
+        //    else
+        //    {
+        //        animator.SetBool("R", false);
+        //        animator.SetBool("L", false);
+        //    }
+        //}
+
+        if(Input.GetKeyDown(KeyCode.LeftShift) && isDashed != true)
+        {
+            if (animator.GetBool("FW"))
+            {
+                animator.SetTrigger("rollFW");
+            }
+            if (animator.GetBool("BW"))
+            {
+                animator.SetTrigger("rollBW");
+            }
+            if (animator.GetBool("R"))
+            {
+                animator.SetTrigger("rollR");
+            }
+            if (animator.GetBool("L"))
+            {
+                animator.SetTrigger("rollL");
+            }
+
+        }
+
+
+
+
     }
 }

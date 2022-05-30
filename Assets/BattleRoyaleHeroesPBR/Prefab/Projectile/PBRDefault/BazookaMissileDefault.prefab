@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1010106222350358236}
   - component: {fileID: 1010106222351652604}
   - component: {fileID: 1010106222352782396}
-  - component: {fileID: 2485026293576344193}
-  - component: {fileID: 984685245146529478}
-  - component: {fileID: 8930518458735652409}
+  - component: {fileID: 3147000235998223167}
+  - component: {fileID: 5509627496862993703}
+  - component: {fileID: -6271360876588577292}
   m_Layer: 0
   m_Name: BazookaMissileDefault
   m_TagString: Bullet
@@ -86,7 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &2485026293576344193
+--- !u!54 &3147000235998223167
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,7 +102,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &984685245146529478
+--- !u!65 &5509627496862993703
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16725685, y: 0.16725677, z: 0.6963769}
   m_Center: {x: 0.000000037252903, y: -0.0000007599592, z: 0.22905129}
---- !u!114 &8930518458735652409
+--- !u!114 &-6271360876588577292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

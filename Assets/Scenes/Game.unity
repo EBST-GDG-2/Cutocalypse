@@ -1256,7 +1256,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0294659, y: 1}
+    m_SensorSize: {x: 0.6863469, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1273,7 +1273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671608564}
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0.27055633, y: 23.58861, z: -15.298576}
+  m_LocalPosition: {x: -0.7014243, y: 23.588608, z: -13.729444}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1893,7 +1893,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0.27055633, y: 23.58861, z: -15.298576}
+  m_LocalPosition: {x: -0.7014243, y: 23.588608, z: -13.729444}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1994,7 +1994,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996588986}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 2.13, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2005,7 +2005,7 @@ Transform:
   - {fileID: 373822830}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &996588989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2053,11 +2053,12 @@ MonoBehaviour:
   curs: {fileID: 2800000, guid: 824ce1aa773091f47af3472b47f904f8, type: 3}
   healthBar: {fileID: 359539054}
   animator: {fileID: 996588987}
-  hareketHizi: 7
+  hareketHizi: 4
   mermiHizi: 64
-  cursorTexture: {fileID: 0}
+  cursorTexture: {fileID: 2800000, guid: 824ce1aa773091f47af3472b47f904f8, type: 3}
   firePoint: {fileID: 645506511}
   bullet: {fileID: 1010106222350519036, guid: b20ded6f41cfbc74fa89b3c01640cd22, type: 3}
+  muzzleFlash: {fileID: 1622991815771545242, guid: 9aa9d67b863b2e34faa97679c379cf0e, type: 3}
   jumpingForce: 20
   maxHeatlh: 100
   currentHealth: 0
@@ -6829,6 +6830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 6155155444896739136, guid: a0b5179fb1b56c145845ca5ee926cbe9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6155155444896739143, guid: a0b5179fb1b56c145845ca5ee926cbe9, type: 3}
       propertyPath: coin
       value: 
@@ -6875,6 +6880,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6155155444896739258, guid: a0b5179fb1b56c145845ca5ee926cbe9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155155445440357722, guid: a0b5179fb1b56c145845ca5ee926cbe9, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6155155445675974093, guid: a0b5179fb1b56c145845ca5ee926cbe9, type: 3}

@@ -6,20 +6,18 @@ ScriptsOnlyBuild:
     - CamTarget
     - DeployEnemy
     - HealthBar
+    - Menu
     - PlayerMovement
     - ZombieAI
+    - flipCoin
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
     - Cinemachine.CinemachineFramingTransposer
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineVirtualCamera
-    Unity.AI.Navigation.Editor.dll:
-    - Unity.AI.Navigation.Editor.NavMeshAssetManager
     Unity.AI.Navigation.dll:
     - Unity.AI.Navigation.NavMeshSurface
-    Unity.Formats.Fbx.Editor.dll:
-    - UnityEditor.Formats.Fbx.Exporter.ExportSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -28,16 +26,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    Unity.Timeline.dll:
-    - UnityEngine.Timeline.TimelineAsset
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -45,6 +34,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -70,8 +60,11 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
     - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
@@ -79,12 +72,37 @@ ScriptsOnlyBuild:
     - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
     - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
     - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
-  methodsToPreserve: []
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: Loadscene
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: Hesap
+  - assembly: UnityEngine.AnimationModule
+    fullTypeName: UnityEngine.Animator
+    methodName: SetTrigger
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: Hesap
+  - assembly: UnityEngine.AnimationModule
+    fullTypeName: UnityEngine.Animator
+    methodName: SetTrigger
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: Hesap
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: Hesap
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: Hesap
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -104,8 +122,6 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
@@ -132,51 +148,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2384}
+      Script: {instanceID: 1598}
     - Class: 114
-      Script: {instanceID: 2814}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 2896}
+      Script: {instanceID: 2872}
     - Class: 114
-      Script: {instanceID: 2984}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 3148}
+      Script: {instanceID: 2996}
     - Class: 114
-      Script: {instanceID: 4038}
+      Script: {instanceID: 3974}
     - Class: 114
-      Script: {instanceID: 4590}
+      Script: {instanceID: 4514}
     - Class: 114
-      Script: {instanceID: 4666}
+      Script: {instanceID: 4632}
     - Class: 114
-      Script: {instanceID: 4710}
+      Script: {instanceID: 5422}
     - Class: 114
-      Script: {instanceID: 4802}
+      Script: {instanceID: 5490}
     - Class: 114
-      Script: {instanceID: 5130}
+      Script: {instanceID: 5536}
     - Class: 114
-      Script: {instanceID: 5590}
+      Script: {instanceID: 5846}
     - Class: 114
-      Script: {instanceID: 5966}
+      Script: {instanceID: 5944}
     - Class: 114
-      Script: {instanceID: 6070}
+      Script: {instanceID: 6084}
     - Class: 114
-      Script: {instanceID: 6284}
+      Script: {instanceID: 6150}
     - Class: 114
-      Script: {instanceID: 6768}
+      Script: {instanceID: 6616}
     - Class: 114
-      Script: {instanceID: 6812}
+      Script: {instanceID: 6656}
     - Class: 114
-      Script: {instanceID: 7434}
+      Script: {instanceID: 6856}
     - Class: 114
-      Script: {instanceID: 8472}
+      Script: {instanceID: 7254}
     - Class: 114
-      Script: {instanceID: 9494}
+      Script: {instanceID: 8258}
     - Class: 114
-      Script: {instanceID: 54276}
-    - Class: 114
-      Script: {instanceID: 67364}
-    - Class: 114
-      Script: {instanceID: 130812}
+      Script: {instanceID: 9268}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -205,7 +217,84 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 238
       Script: {instanceID: 0}
+    Assets/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1596}
+    - Class: 114
+      Script: {instanceID: 1598}
+    - Class: 114
+      Script: {instanceID: 2362}
+    - Class: 114
+      Script: {instanceID: 2872}
+    - Class: 114
+      Script: {instanceID: 3462}
+    - Class: 114
+      Script: {instanceID: 4588}
+    - Class: 114
+      Script: {instanceID: 4722}
+    - Class: 114
+      Script: {instanceID: 5042}
+    - Class: 114
+      Script: {instanceID: 5944}
+    - Class: 114
+      Script: {instanceID: 6656}
+    - Class: 114
+      Script: {instanceID: 6856}
+    - Class: 114
+      Script: {instanceID: 7254}
+    - Class: 114
+      Script: {instanceID: 9184}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
@@ -448,10 +537,22 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
+      Hash: a1e6d97549cd348e8083cddbd7fbfefb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ZombieAI
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineHardLookAt
+  - hash:
+      serializedVersion: 2
+      Hash: 74d4f46ea42ab5b09df82a8483df32a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ZombieFree
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -464,12 +565,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
-  - hash:
-      serializedVersion: 2
-      Hash: ae83e830e7a90c0aff918c4c2e520825
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: 4813651201f27545e965f85d5df14dc2
@@ -653,6 +748,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: onCollect
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
@@ -718,6 +819,12 @@ ScriptsOnlyBuild:
     className: ScriptGraphAsset
   - hash:
       serializedVersion: 2
+      Hash: 83553340546b889da127a76ed9235c2b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ZombieCameraLogic
+  - hash:
+      serializedVersion: 2
       Hash: e63944317d2f5958e31963668bb29158
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -760,13 +867,19 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 73b6aae29d0a63b8f216ced1c50ff5f6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ZombieCharacterControl
+  - hash:
+      serializedVersion: 2
       Hash: e6d75f1a9bc0c6f7085df0baa077e688
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineGroupComposer
   - hash:
       serializedVersion: 2
-      Hash: 9240a6414fecae0866937cf60fda4465
+      Hash: 7947f67cd465475fd5839a59f19f3832
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -970,6 +1083,12 @@ ScriptsOnlyBuild:
     className: TMP_TextInfoDebugTool
   - hash:
       serializedVersion: 2
+      Hash: 4b8dff74c0603f3e6246514a412ffcba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthBar
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -998,6 +1117,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: flipCoin
   - hash:
       serializedVersion: 2
       Hash: 4a639215e29265dd99e4fed19e3fa9f4
@@ -1097,6 +1222,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: onCollision
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionEnter2DMessageListener
@@ -1130,6 +1261,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Sequences.dll
     namespaceName: UnityEngine.Sequences
     className: PlayableDirectorInternalState
+  - hash:
+      serializedVersion: 2
+      Hash: c072d4f4c7abf2bc00b9228cb7ce1a62
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeployEnemy
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1624,6 +1761,12 @@ ScriptsOnlyBuild:
     className: VertexZoom
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
+  - hash:
+      serializedVersion: 2
       Hash: b5c3dbcb94925c8b595ad16a62b44788
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1676,43 +1819,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 4b8dff74c0603f3e6246514a412ffcba
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HealthBar
-  - hash:
-      serializedVersion: 2
-      Hash: ab28948c514a0b2905d0bc20679b0281
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ZombieAI
-  - hash:
-      serializedVersion: 2
-      Hash: 73b6aae29d0a63b8f216ced1c50ff5f6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ZombieCharacterControl
-  - hash:
-      serializedVersion: 2
-      Hash: 74d4f46ea42ab5b09df82a8483df32a1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ZombieFree
-  - hash:
-      serializedVersion: 2
-      Hash: 83553340546b889da127a76ed9235c2b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ZombieCameraLogic
-  - hash:
-      serializedVersion: 2
-      Hash: c072d4f4c7abf2bc00b9228cb7ce1a62
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DeployEnemy
   platform: 19
   scenePathNames:
+  - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/elbru/Desktop/YetAnotherEBST/YetAnotherEBST.exe
+  playerPath: C:/Users/emirc/Desktop/shootergame/YetAnotherEBST.exe

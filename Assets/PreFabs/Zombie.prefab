@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159265662833127421}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159265662833127421
 Transform:
@@ -41,12 +41,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153372950314025557}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153372950314025557
 Transform:
@@ -73,12 +73,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159424600435570795}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig L Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159424600435570795
 Transform:
@@ -104,12 +104,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159474363975930863}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig R Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159474363975930863
 Transform:
@@ -135,12 +135,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159509502982923573}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159509502982923573
 Transform:
@@ -167,12 +167,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153242304266106877}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153242304266106877
 Transform:
@@ -202,12 +202,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6159745506404392037}
   - component: {fileID: 6092434936847196327}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: zombie_zombie4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159745506404392037
 Transform:
@@ -314,12 +314,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6155155444845989045}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &6155155444845989045
 RectTransform:
@@ -356,12 +356,12 @@ GameObject:
   - component: {fileID: 6155155444896739141}
   - component: {fileID: 6155155444896739142}
   - component: {fileID: 6155155444896739143}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6155155444896739258
 Transform:
@@ -495,6 +495,7 @@ MonoBehaviour:
     m_Bits: 8
   coin: {fileID: 0}
   walkPoint: {x: 100, y: 0, z: 100}
+  alive: 0
   walkPointRange: 100
   sightRange: 50
   attackRange: 1
@@ -512,12 +513,12 @@ GameObject:
   - component: {fileID: 6155155445045555924}
   - component: {fileID: 6155155445045555925}
   - component: {fileID: 6155155445045555926}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &6155155445045555927
 RectTransform:
@@ -610,12 +611,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6155155445202360853}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &6155155445202360853
 RectTransform:
@@ -649,12 +650,12 @@ GameObject:
   - component: {fileID: 6155155445364030019}
   - component: {fileID: 6155155445364030017}
   - component: {fileID: 6155155445364030018}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &6155155445364030019
 RectTransform:
@@ -725,12 +726,12 @@ GameObject:
   - component: {fileID: 6155155445440357722}
   - component: {fileID: 6155155445440357720}
   - component: {fileID: 6155155445440357721}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 0
 --- !u!224 &6155155445440357722
 RectTransform:
@@ -801,12 +802,12 @@ GameObject:
   - component: {fileID: 6155155445607773191}
   - component: {fileID: 6155155445607773189}
   - component: {fileID: 6155155445607773190}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &6155155445607773191
 RectTransform:
@@ -936,12 +937,12 @@ GameObject:
   - component: {fileID: 6155155445675974093}
   - component: {fileID: 6155155445675974083}
   - component: {fileID: 6155155445675974092}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &6155155445675974093
 RectTransform:
@@ -1011,12 +1012,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6155155446900061141}
   - component: {fileID: 6155155446900061140}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackArea
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6155155446900061141
 Transform:
@@ -1055,12 +1056,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159727747445296115}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159727747445296115
 Transform:
@@ -1087,12 +1088,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153323729526929753}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig L Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153323729526929753
 Transform:
@@ -1118,12 +1119,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159561407732227921}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig L Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159561407732227921
 Transform:
@@ -1149,12 +1150,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159469947431447787}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159469947431447787
 Transform:
@@ -1180,12 +1181,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159754664784697649}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159754664784697649
 Transform:
@@ -1212,12 +1213,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153221739772869997}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153221739772869997
 Transform:
@@ -1244,12 +1245,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159662442996180031}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig R Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159662442996180031
 Transform:
@@ -1275,12 +1276,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159673864974540775}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig R Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159673864974540775
 Transform:
@@ -1306,12 +1307,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153141379001645023}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153141379001645023
 Transform:
@@ -1338,12 +1339,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159701257272993971}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159701257272993971
 Transform:
@@ -1370,12 +1371,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153268687006227657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153268687006227657
 Transform:
@@ -1402,12 +1403,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159495303596737291}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159495303596737291
 Transform:
@@ -1434,12 +1435,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153250602071741247}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153250602071741247
 Transform:
@@ -1466,12 +1467,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153286057769522813}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153286057769522813
 Transform:
@@ -1498,12 +1499,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159456437706858067}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159456437706858067
 Transform:
@@ -1530,12 +1531,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159760427521155721}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159760427521155721
 Transform:
@@ -1564,12 +1565,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153432711158485887}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig L Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153432711158485887
 Transform:
@@ -1595,12 +1596,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159478398675749649}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159478398675749649
 Transform:
@@ -1627,12 +1628,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153133125200643591}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153133125200643591
 Transform:
@@ -1661,12 +1662,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159625534234066443}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159625534234066443
 Transform:
@@ -1695,12 +1696,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159567219492916121}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159567219492916121
 Transform:
@@ -1728,12 +1729,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6153220016606131363}
   - component: {fileID: 6068769211701888745}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FreeZombieSimpleMovement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153220016606131363
 Transform:
@@ -1781,12 +1782,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153394250101142515}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: basic_rig R Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6153394250101142515
 Transform:

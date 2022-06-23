@@ -18,7 +18,7 @@ public class ZombieAI : MonoBehaviour
     [SerializeField] private GameObject coin;
 
     public Vector3 walkPoint;
-    bool alive;
+    public bool alive;
     bool walkPointSet;
     public float walkPointRange;
     private int Puan;
@@ -101,7 +101,6 @@ public class ZombieAI : MonoBehaviour
     {
         agent.SetDestination(player.position);
     }
-
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
@@ -121,6 +120,7 @@ public class ZombieAI : MonoBehaviour
         gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
         zombieAsset.SetTrigger("Dead");
         agent.SetDestination(transform.position);
+        playerInAttackRan = false;
         attackArea.SetActive(false);
         canvas.SetActive(false);
         yield return new WaitForSeconds(2);
